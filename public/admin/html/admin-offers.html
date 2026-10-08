@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Offers Management | RideHub Admin</title>
+
+    <!-- Google Sans Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Admin Offers CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/admin-offers.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         ADMIN SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar">
+
+    <!-- Logo -->
+    <div class="sidebar-brand">
+
+        <div class="sidebar-logo">
+            <span>Ride</span>Hub
+        </div>
+
+        <div class="sidebar-admin-label">
+            ADMIN PANEL
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <div class="sidebar-navigation">
+
+        <p class="nav-heading">
+            MAIN MENU
+        </p>
+
+
+        <nav class="sidebar-nav">
+
+
+            <!-- Dashboard -->
+            <a
+                href="dashboard.html"
+                class="sidebar-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <rect
+                        x="3"
+                        y="3"
+                        width="7"
+                        height="7"
+                        rx="1"
+                    />
+
+                    <rect
+                        x="14"
+                        y="3"
+                        width="7"
+                        height="7"
+                        rx="1"
+                    />
+
+                    <rect
+                        x="3"
+                        y="14"
+                        width="7"
+                        height="7"
+                        rx="1"
+                    />
+
+                    <rect
+                        x="14"
+                        y="14"
+                        width="7"
+                        height="7"
+                        rx="1"
+                    />
+
+                </svg>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- Vehicles -->
+            <a
+                href="vehicles.html"
+                class="sidebar-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M5 17h14"
+                    />
+
+                    <path
+                        d="M6 17l1.5-6h9L19 17"
+                    />
+
+                    <circle
+                        cx="7"
+                        cy="17"
+                        r="2"
+                    />
+
+                    <circle
+                        cx="17"
+                        cy="17"
+                        r="2"
+                    />
+
+                    <path
+                        d="M8 11l2-4h4l2 4"
+                    />
+
+                </svg>
+
+                <span>Vehicles</span>
+
+            </a>
+
+
+            <!-- Offers -->
+            <a
+                href="admin-offers.html"
+                class="sidebar-link active"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"
+                    />
+
+                    <path
+                        d="M2 7h20v5H2z"
+                    />
+
+                    <path
+                        d="M12 7v14"
+                    />
+
+                    <path
+                        d="M12 7H8.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Z"
+                    />
+
+                    <path
+                        d="M12 7h3.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"
+                    />
+
+                </svg>
+
+                <span>Offers</span>
+
+            </a>
+
+
+            <!-- Enquiries -->
+            <a
+                href="admin-enquiries.html"
+                class="sidebar-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2"
+                    />
+
+                    <path
+                        d="m3 7 9 6 9-6"
+                    />
+
+                </svg>
+
+                <span>Enquiries</span>
+
+            </a>
+
+
+            <!-- Contact Messages -->
+            <a
+                href="admin-contact.html"
+                class="sidebar-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.7-4.2A8.2 8.2 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5Z"
+                    />
+
+                </svg>
+
+                <span>Contact Messages</span>
+
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- Sidebar Bottom -->
+    <div class="sidebar-bottom">
+
+        <div class="sidebar-divider"></div>
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+
+                <path
+                    d="M10 17l5-5-5-5"
+                />
+
+                <path
+                    d="M15 12H3"
+                />
+
+                <path
+                    d="M21 19V5a2 2 0 0 0-2-2h-5"
+                />
+
+            </svg>
+
+            <span>Logout</span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="offers-main">
+
+        <!-- PAGE HEADER -->
+
+        <header class="page-header">
+
+            <div>
+
+                <p class="dashboard-eyebrow">
+                    OFFER MANAGEMENT
+                </p>
+
+                <h2>
+                    Offers
+                </h2>
+
+                <p class="page-subtitle">
+                    Manage the status of your showroom offers.
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             OFFERS SECTION
+        ================================================== -->
+
+        <section class="offers-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="dashboard-eyebrow">
+                        CURRENT OFFERS
+                    </p>
+
+                    <h3>
+                        Manage Offers
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- Loading -->
+
+            <p
+                id="loadingMessage"
+                class="table-message"
+            >
+                Loading offers...
+            </p>
+
+
+            <!-- Error -->
+
+            <p
+                id="errorMessage"
+                class="table-message error-message"
+                style="display: none;"
+            >
+            </p>
+
+
+            <!-- Offers Container -->
+
+            <div
+                class="offers-list"
+                id="offersList"
+                style="display: none;"
+            >
+
+                <!-- Offer cards will be created by JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Admin Offers JS -->
+
+    <script src="../js/admin-offers.js"></script>
+
+</body>
+
+</html>

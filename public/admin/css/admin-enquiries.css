@@ -1,0 +1,781 @@
+/* =====================================================
+   RIDEHUB ADMIN - ENQUIRIES PAGE
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    background: #f5f6f3;
+
+    color: #011d19;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.admin-dashboard {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.admin-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 252px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 17px 20px;
+
+    background: #011d19;
+
+    z-index: 20;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.sidebar-brand {
+    padding: 2px 14px 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.sidebar-logo {
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+
+.sidebar-logo span {
+    color: #7a900b;
+}
+
+
+.sidebar-admin-label {
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 2.2px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.sidebar-navigation {
+    margin-top: 29px;
+}
+
+
+.nav-heading {
+    padding: 0 14px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+}
+
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 12px;
+}
+
+
+.sidebar-link {
+    position: relative;
+
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    color: rgba(255, 255, 255, 0.61);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-left: 3px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.sidebar-link svg {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.sidebar-link:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+.sidebar-link.active {
+    color: #ffffff;
+
+    background: rgba(122, 144, 11, 0.15);
+
+    border-left-color: #7a900b;
+}
+
+
+.sidebar-link.active svg {
+    color: #9eaf35;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+===================================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+
+.sidebar-divider {
+    height: 1px;
+
+    margin: 0 5px 13px;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.logout-button {
+    width: 100%;
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.logout-button svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.logout-button:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.admin-main {
+    width: calc(100% - 252px);
+
+    min-height: 100vh;
+
+    margin-left: 252px;
+
+    padding: 25px 48px 55px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.admin-header {
+    margin-bottom: 42px;
+}
+
+
+.dashboard-eyebrow {
+    margin-bottom: 7px;
+
+    color: #7a900b;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.admin-header h1 {
+    color: #011d19;
+
+    font-size: 38px;
+    line-height: 1;
+
+    font-weight: 650;
+
+    letter-spacing: -1.2px;
+}
+
+
+.admin-subtitle {
+    margin-top: 10px;
+
+    color: #737b78;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ENQUIRIES SECTION
+===================================================== */
+
+.enquiries-section {
+    width: 100%;
+}
+
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    color: #011d19;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.section-heading p {
+    margin-top: 4px;
+
+    color: #858c89;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.enquiries-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6e1;
+}
+
+
+.enquiries-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 1050px;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.enquiries-table th {
+    padding: 15px 16px;
+
+    background: #f7f8f5;
+
+    color: #69716e;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #e2e6e1;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE CELLS
+===================================================== */
+
+.enquiries-table td {
+    padding: 16px;
+
+    color: #4f5855;
+
+    font-size: 14px;
+
+    vertical-align: top;
+
+    border-bottom: 1px solid #edf0ec;
+}
+
+
+.enquiries-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.enquiries-table tbody tr:hover {
+    background: #fbfcfa;
+}
+
+
+/* =====================================================
+   ENQUIRY ID
+===================================================== */
+
+.enquiry-id {
+    color: #858c89;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CUSTOMER
+===================================================== */
+
+.customer-name {
+    color: #011d19;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.customer-email {
+    margin-top: 3px;
+
+    color: #858c89;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-phone {
+    color: #4f5855;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   VEHICLE
+===================================================== */
+
+.vehicle-name {
+    color: #011d19;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TYPE
+===================================================== */
+
+.enquiry-type {
+    color: #69716e;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.enquiry-message {
+    width: 240px;
+
+    color: #69716e;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   STATUS BADGE
+===================================================== */
+
+.enquiry-status {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.enquiry-status.pending {
+    color: #9a5a32;
+
+    background: rgba(154, 90, 50, 0.1);
+}
+
+
+.enquiry-status.completed {
+    color: #617408;
+
+    background: rgba(122, 144, 11, 0.1);
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.enquiry-date {
+    color: #858c89;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   ACTION BUTTON
+===================================================== */
+
+.status-button {
+    padding: 8px 12px;
+
+    border: 1px solid #d9ded8;
+
+    background: #ffffff;
+
+    color: #011d19;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.status-button:hover {
+    border-color: #7a900b;
+
+    background: #7a900b;
+
+    color: #ffffff;
+}
+
+
+.status-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   TABLE MESSAGES
+===================================================== */
+
+.table-message {
+    width: 100%;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6e1;
+
+    color: #858c89;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+.error-message {
+    color: #a34f3d;
+}
+
+
+/* =====================================================
+   TABLE EMPTY STATE
+===================================================== */
+
+.empty-message {
+    padding: 50px 30px;
+
+    color: #858c89;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .admin-sidebar {
+        width: 225px;
+    }
+
+
+    .admin-main {
+        width: calc(100% - 225px);
+
+        margin-left: 225px;
+
+        padding: 35px 30px 45px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .admin-dashboard {
+        display: block;
+    }
+
+
+    .admin-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px 16px;
+    }
+
+
+    .sidebar-brand {
+        padding-bottom: 18px;
+    }
+
+
+    .sidebar-navigation {
+        margin-top: 20px;
+    }
+
+
+    .sidebar-nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+
+    .sidebar-link {
+        min-height: 43px;
+
+        font-size: 12px;
+    }
+
+
+    .sidebar-bottom {
+        margin-top: 12px;
+    }
+
+
+    /* Main */
+
+    .admin-main {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 28px 17px 40px;
+    }
+
+
+    .admin-header {
+        margin-bottom: 32px;
+    }
+
+
+    .admin-header h1 {
+        font-size: 32px;
+    }
+
+
+    .enquiries-section {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .sidebar-nav {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-main {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+}

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RideHub | Bikes & Scooters</title>
+
+    <meta name="description"
+          content="Explore bikes and scooters available at RideHub.">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,300..700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/bikes.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <!-- Logo -->
+
+        <a href="index.html"
+           class="logo">
+
+            <span class="logo-green">Ride</span>Hub
+
+        </a>
+
+
+        <!-- Navigation -->
+
+        <nav class="navbar">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bikes.html"
+                       class="active">
+                        Bikes/Scooters
+                    </a>
+                </li>
+
+                <li>
+                    <a href="offers.html">
+                        Offers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- Enquire Button -->
+
+        <a href="enquiry.html"
+           class="btn enquire-btn">
+
+            Enquire Now
+
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <div class="hamburger">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     VEHICLE CATALOGUE
+===================================================== -->
+
+<main class="vehicle-page">
+
+
+    <!-- =================================================
+         PAGE INTRO
+    ================================================== -->
+
+    <section class="vehicle-intro">
+
+        <div class="container">
+
+            <h1>
+                ALL BIKES &amp; SCOOTERS
+            </h1>
+
+            <p>
+                Find your perfect ride from our range of
+                bikes and scooters.
+            </p>
+
+
+            <!-- Category Tabs -->
+
+            <div class="vehicle-tabs">
+
+                <button class="vehicle-tab active"
+                        data-target="motorcycles">
+
+                    MOTORCYCLES
+
+                </button>
+
+                <button class="vehicle-tab"
+                        data-target="scooters">
+
+                    SCOOTERS
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LISTING AREA
+    ================================================== -->
+
+    <section class="vehicle-listing">
+
+        <div class="container vehicle-layout">
+
+
+            <!-- =============================================
+                 FILTER SIDEBAR
+            ============================================== -->
+
+            <aside class="filter-sidebar">
+
+                <div class="filter-header">
+
+                    <h2>
+                        FILTERS
+                    </h2>
+
+                </div>
+
+
+                <!-- Price -->
+
+                <div class="filter-group">
+
+                    <h3>
+                        Price Range
+                    </h3>
+
+
+                    <div class="price-inputs">
+
+                        <div class="price-field">
+
+                            <label for="min-price">
+                                Min Price
+                            </label>
+
+                            <input
+                                type="number"
+                                id="min-price"
+                                placeholder="₹ 0"
+                                min="0">
+
+                        </div>
+
+
+                        <div class="price-field">
+
+                            <label for="max-price">
+                                Max Price
+                            </label>
+
+                            <input
+                                type="number"
+                                id="max-price"
+                                placeholder="₹ 5,00,000"
+                                min="0">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sort -->
+
+                <div class="filter-group">
+
+                    <h3>
+                        Sort By
+                    </h3>
+
+                    <select id="sort-vehicles">
+
+                        <option value="default">
+                            Default
+                        </option>
+
+                        <option value="az">
+                            Name: A to Z
+                        </option>
+
+                        <option value="za">
+                            Name: Z to A
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Filter Buttons -->
+
+                <div class="filter-actions">
+
+                    <button
+                        type="button"
+                        class="btn primary-btn"
+                        id="apply-filters">
+
+                        Apply Filters
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="clear-btn"
+                        id="clear-filters">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =============================================
+                 VEHICLE CONTENT
+            ============================================== -->
+
+            <div class="vehicle-content">
+
+
+                <!-- =========================================
+                     MOTORCYCLES
+                ========================================== -->
+
+                <section class="vehicle-category"
+                         id="motorcycles">
+
+                    <div class="category-heading">
+
+                        <div>
+
+                            <h2>
+                                MOTORCYCLES
+                            </h2>
+
+                            <p>
+                                Explore our range of premium motorcycles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="vehicle-grid"
+                         id="motorcycle-grid">
+
+
+                        <!-- Motorcycle 1 -->
+
+                        <a href="bike-details.html?id=apache-rtr-160-4v"
+                           class="vehicle-card"
+                           data-name="TVS Apache RTR 160 4V"
+                           data-price="125890"
+                           data-vehicle-id="apache-rtr-160-4v">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/apache-rtr160.png"
+                                    alt="TVS Apache RTR 160 4V">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    TVS Apache RTR 160 4V
+                                </h3>
+
+                                <p>
+                                    ₹ 1,25,890
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Motorcycle 2 -->
+
+                        <a href="bike-details.html?id=yamaha-r15-v4"
+                           class="vehicle-card"
+                           data-name="Yamaha R15 V4"
+                           data-price="179000"
+                           data-vehicle-id="yamaha-r15-v4">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/yamaha-r15.png"
+                                    alt="Yamaha R15 V4">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Yamaha R15 V4
+                                </h3>
+
+                                <p>
+                                    ₹ 1,79,000
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Motorcycle 3 -->
+
+                        <a href="bike-details.html?id=hunter-350"
+                           class="vehicle-card"
+                           data-name="Royal Enfield Hunter 350"
+                           data-price="171077"
+                           data-vehicle-id="hunter-350">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/hunter-350.png"
+                                    alt="Royal Enfield Hunter 350">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Royal Enfield Hunter 350
+                                </h3>
+
+                                <p>
+                                    ₹ 1,71,077
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Motorcycle 4 -->
+
+                        <a href="bike-details.html?id=apache-rtr-200-4v"
+                           class="vehicle-card"
+                           data-name="TVS Apache RTR 200 4V"
+                           data-price="133736"
+                           data-vehicle-id="apache-rtr-200-4v">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/apache-rtr200.png"
+                                    alt="TVS Apache RTR 200 4V">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    TVS Apache RTR 200 4V
+                                </h3>
+
+                                <p>
+                                    ₹ 1,33,736
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Motorcycle 5 -->
+
+                        <a href="bike-details.html?id=pulsar-ns200"
+                           class="vehicle-card"
+                           data-name="Bajaj Pulsar NS200"
+                           data-price="164496"
+                           data-vehicle-id="pulsar-ns200">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/pulsar-ns200.png"
+                                    alt="Bajaj Pulsar NS200">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Bajaj Pulsar NS200
+                                </h3>
+
+                                <p>
+                                    ₹ 1,64,496
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Motorcycle 6 -->
+
+                        <a href="bike-details.html?id=gixxer-sf"
+                           class="vehicle-card"
+                           data-name="Suzuki Gixxer SF"
+                           data-price="141460"
+                           data-vehicle-id="gixxer-sf">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/suzuki-gixxersf.png"
+                                    alt="Suzuki Gixxer SF">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Suzuki Gixxer SF
+                                </h3>
+
+                                <p>
+                                    ₹ 1,41,460
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Motorcycle 7 -->
+
+                        <a href="bike-details.html?id=hornet-2.0"
+                           class="vehicle-card"
+                           data-name="Honda Hornet 2.0"
+                           data-price="149598"
+                           data-vehicle-id="hornet-2.0">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/bikes/honda-hornet2.0.png"
+                                    alt="Honda Hornet 2.0">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Honda Hornet 2.0
+                                </h3>
+
+                                <p>
+                                    ₹ 1,49,598
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================================
+                     SCOOTERS
+                ========================================== -->
+
+                <section class="vehicle-category scooter-category"
+                         id="scooters">
+
+                    <div class="category-heading">
+
+                        <div>
+
+                            <h2>
+                                SCOOTERS
+                            </h2>
+
+                            <p>
+                                Discover comfortable and stylish scooters.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="vehicle-grid"
+                         id="scooter-grid">
+
+
+                        <!-- Scooter 1 -->
+
+                        <a href="bike-details.html?id=ntorq-125"
+                           class="vehicle-card"
+                           data-name="TVS Ntorq 125"
+                           data-price="97000"
+                           data-vehicle-id="ntorq-125">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/tvs-ntorq125.png"
+                                    alt="TVS Ntorq 125">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    TVS Ntorq 125
+                                </h3>
+
+                                <p>
+                                    ₹ 97,000
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Scooter 2 -->
+
+                        <a href="bike-details.html?id=jupiter-125"
+                           class="vehicle-card"
+                           data-name="TVS Jupiter 125"
+                           data-price="89935"
+                           data-vehicle-id="jupiter-125">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/tvs-jupitar.png"
+                                    alt="TVS Jupiter 125">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    TVS Jupiter 125
+                                </h3>
+
+                                <p>
+                                    ₹ 89,935
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Scooter 3 -->
+
+                        <a href="bike-details.html?id=activa-6g"
+                           class="vehicle-card"
+                           data-name="Honda Activa 6G"
+                           data-price="88553"
+                           data-vehicle-id="activa-6g">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/activa-6g.png"
+                                    alt="Honda Activa 6G">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Honda Activa 6G
+                                </h3>
+
+                                <p>
+                                    ₹ 88,553
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Scooter 4 -->
+
+                        <a href="bike-details.html?id=access-125"
+                           class="vehicle-card"
+                           data-name="Suzuki Access 125"
+                           data-price="89356"
+                           data-vehicle-id="access-125">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/suzuki-access125.png"
+                                    alt="Suzuki Access 125">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Suzuki Access 125
+                                </h3>
+
+                                <p>
+                                    ₹ 89,356
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Scooter 5 -->
+
+                        <a href="bike-details.html?id=burgman"
+                           class="vehicle-card"
+                           data-name="Suzuki Burgman Street"
+                           data-price="112333"
+                           data-vehicle-id="burgman">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/suzuki-burgman.png"
+                                    alt="Suzuki Burgman Street">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Suzuki Burgman Street
+                                </h3>
+
+                                <p>
+                                    ₹ 1,12,333
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Scooter 6 -->
+
+                        <a href="bike-details.html?id=aprilia-sr"
+                            class="vehicle-card"
+                            data-name="Aprilia SR"
+                            data-price="131436"
+                            data-vehicle-id="aprilia-sr">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/aprilia-sr.png"
+                                    alt="Aprilia SR">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Aprilia SR
+                                </h3>
+
+                                <p>
+                                    ₹ 1,31,436
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Scooter 7 -->
+
+                        <a href="bike-details.html?id=avenis"
+                           class="vehicle-card"
+                           data-name="Suzuki Avenis"
+                           data-price="91123"
+                           data-vehicle-id="avenis">
+
+                            <div class="vehicle-image">
+
+                                <img src="img/scooters/suzuki-avenis.png"
+                                    alt="Suzuki Avenis">
+
+                            </div>
+
+                            <div class="vehicle-info">
+
+                                <h3>
+                                    Suzuki Avenis
+                                </h3>
+
+                                <p>
+                                    ₹ 91,123
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- JavaScript -->
+
+<script src="js/main.js"></script>
+<script src="js/bikes.js"></script>
+
+</body>
+
+</html>

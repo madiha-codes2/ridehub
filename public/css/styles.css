@@ -1,0 +1,2137 @@
+/* =====================================================
+   RIDEHUB - GLOBAL STYLES
+===================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Google Sans Flex', sans-serif;
+    background: #f8f9fb;
+    color: #222;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+    --primary: #7a900b;
+    --primary-dark: #617408;
+
+    --secondary: #011d19;
+    --secondary-light: #05332c;
+
+    --background: #fbfafb;
+    --surface: #ffffff;
+
+    --text: #171717;
+    --text-light: #666666;
+
+    --border: #e8e8e8;
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    --transition: .35s ease;
+
+    --radius: 16px;
+
+    --max-width: 1250px;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.container {
+    width: 96%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+section {
+    padding: 50px 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--text-light);
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(131, 195, 65, .35);
+
+    z-index: 4;
+}
+
+.secondary-btn {
+    color: #011d19;
+    background: #fbfafb;
+    border: 2px solid #7a900b;
+}
+
+.secondary-btn:hover {
+    background: #7a900b;
+    color: #fbfafb;
+}
+
+.view-btn {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.view-btn:hover {
+    color: var(--primary-dark);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 72px;
+
+    background: rgba(0, 0, 0, .90);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+}
+
+
+/* =====================================================
+   NAV CONTAINER
+===================================================== */
+
+.nav-container {
+    position: relative;
+
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    width: 94%;
+    max-width: 1450px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    font-family: "Google Sans Flex", sans-serif;
+
+    font-weight: 600;
+    letter-spacing: .4px;
+
+    font-size: 1.85rem;
+
+    color: white;
+
+    transition: .35s;
+
+    z-index: 1002;
+}
+
+.logo-green {
+    color: var(--primary);
+}
+
+.logo:hover {
+    letter-spacing: 1px;
+}
+
+.logo:hover .logo-green {
+    color: #9ddf45;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+/*
+   IMPORTANT:
+   Desktop navigation is positioned in the CENTER
+   independently from the logo and Enquire Now button.
+*/
+
+.navbar {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+
+    z-index: 1001;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 55px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: white;
+
+    font-weight: 500;
+    font-size: 1.05rem;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 0;
+
+    margin: 0;
+    padding: 0 0 6px;
+
+    background: transparent;
+
+    transition: .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.nav-links a:hover {
+    color: #7a900b;
+}
+
+
+/* Active page */
+
+.nav-links a.active {
+    color: #7a900b;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+
+/* Navigation underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -10px;
+
+    width: 0;
+    height: 3px;
+
+    background: #7a900b;
+
+    transition: width .3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   ENQUIRE NOW BUTTON
+===================================================== */
+
+/*
+   Desktop:
+   Keeps the button on the RIGHT side of the header.
+*/
+
+.enquire-btn {
+    margin-left: auto;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 10px;
+
+    z-index: 1002;
+}
+
+.enquire-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HAMBURGER
+   HIDDEN ON DESKTOP
+===================================================== */
+
+.hamburger {
+    display: none;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+    font-size: 1rem;
+}
+
+.section-title h2 {
+    color: var(--text);
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    position: relative;
+
+    margin-top: 70px;
+
+    width: 100%;
+    height: 80vh;
+
+    min-height: 550px;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+.hero-slider {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .8s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+
+    z-index: 2;
+}
+
+
+/* FULL SCREEN BIKE IMAGE */
+
+.hero-slide img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+}
+
+
+/* DARK GRADIENT */
+
+.hero-slide .overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(1, 29, 25, .82),
+            rgba(1, 29, 25, .55),
+            rgba(1, 29, 25, .18)
+        );
+}
+
+.hero-content {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    z-index: 5;
+}
+
+.hero-text {
+    max-width: 560px;
+
+    color: #fff;
+
+    padding-top: 20px;
+    padding-left: 25px;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+
+    line-height: 1.02;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 26px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+
+.hero-text p {
+    color: rgba(255, 255, 255, .88);
+
+    font-size: 1.12rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+    max-width: 470px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    min-width: 190px;
+}
+
+.line-two {
+    color: white;
+}
+
+.line-two span {
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   SLIDER DOTS
+===================================================== */
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 34px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 12px;
+
+    z-index: 20;
+}
+
+.dot {
+    width: 8px;
+    height: 7px;
+
+    border-radius: 20px;
+
+    background: #ffffff70;
+
+    cursor: pointer;
+
+    transition: .35s;
+}
+
+.dot.active {
+    width: 25px;
+
+    background: var(--primary);
+
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: white;
+}
+
+
+/* =====================================================
+   TEXT ANIMATION
+===================================================== */
+
+.hero-slide.active .hero-text {
+    animation: heroFade .9s ease;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   HERO RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .hero-text h1 {
+        font-size: 4.2rem;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 650px;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: 75vh;
+        min-height: 520px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 220px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET + MOBILE NAVIGATION
+   992px AND BELOW
+===================================================== */
+
+@media (max-width: 992px) {
+
+    /* ---------------------------------------------
+       HEADER
+    --------------------------------------------- */
+
+    .header {
+        height: 72px;
+    }
+
+    .nav-container {
+        height: 72px;
+
+        width: 94%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* ---------------------------------------------
+       LOGO
+    --------------------------------------------- */
+
+    .logo {
+        font-size: 1.7rem;
+
+        z-index: 1002;
+    }
+
+
+    /* ---------------------------------------------
+       HAMBURGER
+    --------------------------------------------- */
+
+    .hamburger {
+        position: relative;
+
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 5px;
+
+        padding: 0;
+        margin-left: auto;
+
+        background: transparent;
+
+        border: none;
+
+        cursor: pointer;
+
+        z-index: 1003;
+    }
+
+    .hamburger span {
+        display: block;
+
+        width: 26px;
+        height: 3px;
+
+        background: #ffffff;
+
+        border-radius: 10px;
+
+        transition:
+            transform .3s ease,
+            opacity .3s ease,
+            background-color .3s ease;
+    }
+
+    /* Make sure hamburger remains WHITE */
+    .hamburger:hover span {
+        background: #ffffff;
+    }
+
+
+    /* ---------------------------------------------
+       HIDE DESKTOP NAVIGATION
+    --------------------------------------------- */
+
+    .navbar {
+        position: fixed;
+
+        top: 72px;
+        left: 0;
+
+        width: 100vw;
+
+        transform: none;
+
+        background: #011d19;
+
+        display: none;
+
+        z-index: 1001;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    }
+
+
+    /* ---------------------------------------------
+       OPEN MOBILE NAVIGATION
+    --------------------------------------------- */
+
+    .navbar.mobile-active {
+        display: block;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE NAV LINKS
+    --------------------------------------------- */
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 20px 20px;
+
+        margin: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        padding: 15px 10px;
+
+        text-align: center;
+
+        font-size: 1rem;
+
+        color: #ffffff;
+
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+        background: transparent;
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        color: var(--primary);
+
+        background: transparent;
+    }
+
+    /* Remove desktop underline on mobile */
+    .nav-links li a::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 0;
+        height: 2px;
+
+        background: var(--primary);
+
+        transition: width .3s ease;
+    }
+
+    .nav-links li a:hover::after,
+    .nav-links li a.active::after {
+        width: 100%;
+    }
+
+
+    /* ---------------------------------------------
+       HIDE ENQUIRE NOW
+    --------------------------------------------- */
+
+    .enquire-btn {
+        display: none;
+    }
+
+
+    /* ---------------------------------------------
+       HAMBURGER → X
+    --------------------------------------------- */
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+/* =====================================================
+   BENEFITS SECTION
+===================================================== */
+
+.benefits {
+    background: #ffffff;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    padding: 25px 0;
+}
+
+.benefit-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 0;
+}
+
+.benefit-item {
+    text-align: center;
+
+    padding: 10px 25px;
+
+    position: relative;
+}
+
+.benefit-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 15%;
+    right: 0;
+
+    width: 1px;
+    height: 70%;
+
+    background: #e6e6e6;
+}
+
+.benefit-item img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+
+    margin: 0 auto 18px;
+}
+
+.benefit-item h3 {
+    font-size: 1.03rem;
+
+    color: var(--text);
+
+    margin-bottom: 6px;
+
+    font-weight: 650;
+}
+
+.benefit-item p {
+    color: var(--text-light);
+
+    font-size: .87rem;
+}
+
+
+/* =====================================================
+   FEATURED BIKES
+===================================================== */
+
+.featured {
+    background: #f7f8fa;
+}
+
+.bike-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.bike-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    transition: .35s ease;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
+}
+
+.bike-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+}
+
+.bike-card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    transition: .4s;
+
+    background: #fff;
+}
+
+.bike-card:hover img {
+    transform: scale(1.06);
+}
+
+.bike-card h3 {
+    font-size: 1rem;
+
+    padding: 0 16px;
+
+    margin-bottom: 4px;
+
+    color: #111;
+
+    line-height: 1.40;
+}
+
+.bike-card p {
+    padding: 0 16px 16px;
+
+    margin-top: 0;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   SECTION TITLE BUTTON
+===================================================== */
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    position: relative;
+
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -10px;
+
+    width: 65px;
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+}
+
+.view-btn {
+    border: 2px solid var(--primary);
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.view-btn:hover {
+    background: var(--primary);
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   RESPONSIVE BIKES
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .bike-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px;
+    }
+
+    .benefit-item::after {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section-title {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .bike-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        padding: 15px 0;
+
+        border-bottom: 1px solid #ececec;
+    }
+
+    .benefit-item:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* =====================================================
+   OFFERS SECTION
+===================================================== */
+
+.offers {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    background: #f7f8fa;
+}
+
+.offer-content {
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(135deg, #0f0f0f, #1f1f1f);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    min-height: 250px;
+
+    padding: 30px 40px;
+
+    position: relative;
+}
+
+.offer-content::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 15, 15, .96) 0%,
+            rgba(15, 15, 15, .88) 25%,
+            rgba(15, 15, 15, .62) 45%,
+            rgba(15, 15, 15, .25) 70%,
+            rgba(15, 15, 15, .05) 100%
+        );
+
+    pointer-events: none;
+}
+
+.offer-text {
+    max-width: 500px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+.offer-text h2 {
+    color: #fff;
+
+    font-size: 2.4rem;
+
+    margin-bottom: 18px;
+}
+
+.offer-text p {
+    color: #d8d8d8;
+
+    font-size: 1rem;
+
+    margin-bottom: 35px;
+}
+
+.offer-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+.offer-image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #0f0f0f;
+
+    color: #fff;
+
+    padding: 35px 0 15px;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 20px;
+}
+
+.footer h2 {
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+.footer h2 span {
+    color: var(--primary);
+}
+
+.footer h3 {
+    color: #fff;
+
+    margin-bottom: 12px;
+
+    font-size: 1.1rem;
+}
+
+.footer p {
+    color: #bfbfbf;
+
+    margin-bottom: 6px;
+
+    font-size: .95rem;
+}
+
+.footer ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer ul a {
+    color: #bfbfbf;
+
+    transition: .3s;
+}
+
+.footer ul a:hover {
+    color: var(--primary);
+
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.social-links a {
+    color: #bfbfbf;
+
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    text-align: center;
+}
+
+.copyright p {
+    color: #999;
+}
+
+
+/* =====================================================
+   FOOTER RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .offer-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+
+        padding: 50px 35px;
+    }
+
+    .offer-image {
+        justify-content: center;
+    }
+
+    .offer-image img {
+        max-width: 500px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .offer-content {
+        padding: 40px 25px;
+    }
+
+    .offer-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .offer-text p {
+        font-size: 1rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMOOTH ANIMATIONS
+===================================================== */
+
+section {
+    animation: fadeUp .8s ease both;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   HOVER TRANSITIONS
+===================================================== */
+
+* {
+    transition:
+        color .3s ease,
+        background-color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+img {
+    transition: transform .4s ease;
+}
+
+
+/* =====================================================
+   CARD HOVER EFFECTS
+===================================================== */
+
+.bike-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--primary);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: .35s;
+}
+
+.bike-card:hover::before {
+    transform: scaleX(1);
+}
+
+.bike-card:hover h3 {
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   BUTTON EFFECTS
+===================================================== */
+
+.btn {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, .3),
+            transparent
+        );
+
+    transition: .6s;
+}
+
+.btn:hover::before {
+    left: 120%;
+}
+
+
+/* =====================================================
+   IMAGE ZOOM
+===================================================== */
+
+.offer-image {
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   NAVIGATION EFFECT
+===================================================== */
+
+.footer a,
+.nav-links a {
+    transition: .3s;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(131, 195, 65, .15);
+}
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection {
+    background: var(--primary);
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   RESPONSIVE IMPROVEMENTS
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .container {
+        max-width: 1100px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .hero {
+        height: 650px;
+    }
+
+    .offer-content {
+        border-radius: 18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 65px 0;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero-text {
+        padding: 0 15px;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .section-title h2 {
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: .95rem;
+    }
+
+    .btn {
+        padding: 14px 24px;
+    }
+
+    .offer-text h2 {
+        font-size: 1.9rem;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE HERO FIX
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .hero {
+        width: 100%;
+
+        height: 500px;
+        min-height: 500px;
+
+        margin-top: 70px;
+
+        overflow: hidden;
+    }
+
+    .hero-slider {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center center;
+    }
+
+    .hero-content {
+        width: 100%;
+        height: 100%;
+
+        padding: 0 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+
+        line-height: 1.08;
+    }
+
+    .hero-text p {
+        font-size: .95rem;
+
+        line-height: 1.6;
+
+        max-width: 340px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 220px;
+    }
+
+    .slider-dots {
+        bottom: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   OFFERS - RESPONSIVE IMAGE & CONTENT
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .offer-content {
+        min-height: 280px;
+
+        padding: 35px 40px;
+    }
+
+    .offer-image img {
+        object-fit: cover;
+
+        object-position: center center;
+    }
+
+    .offer-text {
+        max-width: 430px;
+    }
+
+    .offer-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .offer-text p {
+        font-size: .95rem;
+
+        margin-bottom: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE OFFERS BANNER - TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .offers {
+        padding: 30px 0 45px;
+    }
+
+    .offer-content {
+        width: 100%;
+
+        aspect-ratio: 2.2 / 1;
+
+        min-height: 0;
+
+        padding: 0;
+
+        position: relative;
+
+        overflow: hidden;
+
+        display: block;
+
+        border-radius: 18px;
+    }
+
+    .offer-image {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: 1;
+
+        overflow: hidden;
+    }
+
+    .offer-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: none;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        display: block;
+    }
+
+    .offer-text {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 5;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        max-width: 500px;
+
+        padding: 30px 40px;
+
+        text-align: left;
+    }
+
+    .offer-text h2 {
+        font-size: 2.2rem;
+
+        margin-bottom: 12px;
+    }
+
+    .offer-text p {
+        margin-bottom: 25px;
+    }
+
+    .offer-text .btn {
+        position: static;
+
+        transform: none;
+
+        min-width: 165px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE OFFERS BANNER - MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .offers {
+        width: 100%;
+
+        padding: 25px 0 40px;
+    }
+
+    .offers .container {
+        width: 100%;
+
+        max-width: none;
+
+        padding: 0 20px;
+    }
+
+    .offer-content {
+        width: 100%;
+
+        aspect-ratio: 2.15 / 1;
+
+        min-height: 0;
+
+        height: auto;
+
+        padding: 0;
+
+        display: block;
+
+        position: relative;
+
+        overflow: hidden;
+
+        border-radius: 16px;
+    }
+
+    .offer-image {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: 1;
+
+        overflow: hidden;
+    }
+
+    .offer-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: none;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        display: block;
+    }
+
+    .offer-content::before {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 2;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(15, 15, 15, .72),
+                rgba(15, 15, 15, .30),
+                rgba(15, 15, 15, .15)
+            );
+
+        pointer-events: none;
+    }
+
+    .offer-text {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 5;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 100%;
+
+        max-width: none;
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .offer-text h2 {
+        font-size: 1.8rem;
+
+        line-height: 1.1;
+
+        margin-bottom: 8px;
+
+        white-space: nowrap;
+
+        color: #fff;
+    }
+
+    .offer-text p {
+        font-size: .85rem;
+
+        line-height: 1.3;
+
+        margin-bottom: 18px;
+
+        white-space: nowrap;
+
+        color: #fff;
+    }
+
+    .offer-text .btn {
+        position: static;
+
+        transform: none;
+
+        min-width: 165px;
+
+        padding: 12px 22px;
+
+        font-size: .95rem;
+
+        z-index: 10;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .offers .container {
+        padding: 0 15px;
+    }
+
+    .offer-content {
+        aspect-ratio: 2 / 1;
+
+        border-radius: 14px;
+    }
+
+    .offer-text {
+        padding: 15px;
+    }
+
+    .offer-text h2 {
+        font-size: 1.55rem;
+    }
+
+    .offer-text p {
+        font-size: .75rem;
+
+        margin-bottom: 14px;
+    }
+
+    .offer-text .btn {
+        min-width: 150px;
+
+        padding: 11px 18px;
+
+        font-size: .9rem;
+    }
+
+}

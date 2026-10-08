@@ -1,0 +1,607 @@
+/* =====================================================
+   RIDEHUB - ENQUIRY PAGE
+===================================================== */
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.enquiry-page {
+
+    min-height: 100vh;
+
+    background: #f7f8fa;
+
+}
+
+
+/* =====================================================
+   PAGE INTRO
+===================================================== */
+
+.enquiry-intro {
+
+    padding-top: 115px;
+    padding-bottom: 32px;
+
+    background: #f5f7ee;
+
+}
+
+
+.enquiry-intro h1 {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+
+}
+
+
+.enquiry-intro h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 4px;
+
+    margin-top: 10px;
+
+    background: #7a900b;
+
+    border-radius: 2px;
+
+}
+
+
+.enquiry-intro p {
+
+    margin: 8px 0 0;
+
+    color: #555;
+
+    font-size: 1rem;
+
+}
+
+
+/* =====================================================
+   MAIN ENQUIRY SECTION
+===================================================== */
+
+.enquiry-section {
+
+    padding: 42px 0 70px;
+
+}
+
+
+.enquiry-container {
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    align-items: stretch;
+
+}
+
+
+/* =====================================================
+   LEFT INFORMATION
+===================================================== */
+
+.enquiry-info {
+
+    padding: 48px 45px;
+
+    background: #011d19;
+
+    color: #ffffff;
+
+    border-radius: 8px 0 0 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.enquiry-label {
+
+    margin-bottom: 15px;
+
+    color: #7a900b;
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.enquiry-info h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+}
+
+
+.enquiry-info h2 span {
+
+    display: block;
+
+    color: #a8cc00;
+
+}
+
+
+.enquiry-info > p {
+
+    max-width: 420px;
+
+    margin: 18px 0 30px;
+
+    color: #cfd6d3;
+
+    font-size: .92rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.enquiry-benefits {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+.benefit-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #ffffff;
+
+    font-size: .88rem;
+
+}
+
+
+.benefit-icon {
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #7a900b;
+
+    color: #ffffff;
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.enquiry-form-card {
+
+    padding: 38px 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e7dc;
+
+    border-left: none;
+
+    border-radius: 0 8px 8px 0;
+
+}
+
+
+/* =====================================================
+   FORM HEADING
+===================================================== */
+
+.form-heading {
+
+    margin-bottom: 25px;
+
+}
+
+
+.form-heading > span {
+
+    color: #7a900b;
+
+    font-size: .7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.form-heading h2 {
+
+    margin: 4px 0 0;
+
+    color: #011d19;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FORM FIELD
+===================================================== */
+
+.form-field {
+
+    margin-bottom: 16px;
+
+}
+
+
+.form-field label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #011d19;
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+}
+
+
+.form-field label span {
+
+    color: #888;
+
+    font-weight: 400;
+
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dcded9;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #011d19;
+
+    font-family: inherit;
+
+    font-size: .85rem;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.form-field input,
+.form-field select {
+
+    height: 42px;
+
+    padding: 0 12px;
+
+}
+
+
+.form-field textarea {
+
+    min-height: 95px;
+
+    padding: 11px 12px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+
+}
+
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+
+    border-color: #7a900b;
+
+    box-shadow: 0 0 0 2px rgba(122, 144, 11, .08);
+
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.field-error {
+
+    display: block;
+
+    min-height: 16px;
+
+    margin-top: 4px;
+
+    color: #b33a32;
+
+    font-size: .72rem;
+
+}
+
+
+/* Invalid field */
+
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+
+    border-color: #b33a32;
+
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.enquiry-submit {
+
+    width: 100%;
+    min-height: 43px;
+    margin-top: 2px;
+
+    border: none;
+    cursor: pointer;
+
+}
+
+/* Hover */
+.enquiry-submit:hover {
+    background: #7a900b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Click / active */
+.enquiry-submit:active {
+    background: #7a900b;
+    color: white;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+.success-message {
+
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 13px 15px;
+
+    border-left: 3px solid #7a900b;
+
+    background: #f5f7ee;
+
+    color: #36514b;
+
+    font-size: .8rem;
+
+    line-height: 1.5;
+
+}
+
+
+.success-message.show {
+
+    display: block;
+
+}
+
+
+.success-message strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #011d19;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .enquiry-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .enquiry-info {
+
+        padding: 38px 35px;
+
+        border-radius: 8px 8px 0 0;
+
+    }
+
+
+    .enquiry-form-card {
+
+        border-left: 1px solid #e3e7dc;
+
+        border-top: none;
+
+        border-radius: 0 0 8px 8px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .enquiry-intro {
+
+        padding-top: 105px;
+
+        padding-bottom: 28px;
+
+    }
+
+
+    .enquiry-intro h1 {
+
+        font-size: 1.75rem;
+
+    }
+
+
+    .enquiry-intro p {
+
+        font-size: .9rem;
+
+        line-height: 1.5;
+
+    }
+
+
+    .enquiry-section {
+
+        padding: 30px 0 50px;
+
+    }
+
+
+    .enquiry-info {
+
+        padding: 32px 25px;
+
+    }
+
+
+    .enquiry-info h2 {
+
+        font-size: 1.65rem;
+
+    }
+
+
+    .enquiry-form-card {
+
+        padding: 30px 25px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .enquiry-info {
+
+        padding: 28px 20px;
+
+    }
+
+
+    .enquiry-form-card {
+
+        padding: 27px 20px;
+
+    }
+
+}

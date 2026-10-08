@@ -1,0 +1,907 @@
+/* =====================================================
+   RIDEHUB ADMIN - VEHICLES
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    background: #f5f6f3;
+
+    color: #011d19;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.admin-dashboard {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.admin-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 252px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 17px 20px;
+
+    background: #011d19;
+
+    z-index: 20;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.sidebar-brand {
+    padding: 2px 14px 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.sidebar-logo {
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+
+.sidebar-logo span {
+    color: #7a900b;
+}
+
+
+.sidebar-admin-label {
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 2.2px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.sidebar-navigation {
+    margin-top: 29px;
+}
+
+
+.nav-heading {
+    padding: 0 14px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+}
+
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 12px;
+}
+
+
+.sidebar-link {
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    color: rgba(255, 255, 255, 0.61);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-left: 3px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.sidebar-link svg {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.sidebar-link:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+.sidebar-link.active {
+    color: #ffffff;
+
+    background: rgba(122, 144, 11, 0.15);
+
+    border-left-color: #7a900b;
+}
+
+
+.sidebar-link.active svg {
+    color: #9eaf35;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+===================================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+
+.sidebar-divider {
+    height: 1px;
+
+    margin: 0 5px 13px;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.logout-button {
+    width: 100%;
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.logout-button:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+.logout-button svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.vehicles-main {
+    width: calc(100% - 252px);
+    min-height: 100vh;
+    margin-left: 252px;
+    padding: 25px 48px 55px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.vehicles-header {
+    margin-bottom: 42px;
+}
+
+
+.dashboard-eyebrow {
+    margin-bottom: 7px;
+
+    color: #7a900b;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.vehicles-header h1 {
+    color: #011d19;
+
+    font-size: 38px;
+    line-height: 1;
+
+    font-weight: 650;
+
+    letter-spacing: -1.2px;
+}
+
+
+.vehicles-subtitle {
+    margin-top: 10px;
+
+    color: #737b78;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.vehicles-section {
+    width: 100%;
+}
+
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    color: #011d19;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.section-heading p {
+    margin-top: 4px;
+
+    color: #858c89;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.vehicles-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6e1;
+}
+
+
+.vehicles-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 760px;
+}
+
+
+.vehicles-table th {
+    padding: 15px 18px;
+
+    background: #f7f8f5;
+
+    color: #69716e;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #e2e6e1;
+}
+
+
+.vehicles-table td {
+    padding: 17px 18px;
+
+    color: #4f5855;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #edf0ec;
+}
+
+
+.vehicles-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.vehicles-table tbody tr:hover {
+    background: #fbfcfa;
+}
+
+
+/* =====================================================
+   VEHICLE NAME
+===================================================== */
+
+.vehicle-name {
+    color: #011d19;
+
+    font-weight: 600;
+}
+
+
+.vehicle-category {
+    color: #858c89;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.vehicle-price {
+    color: #011d19;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   STOCK
+===================================================== */
+
+.stock-badge {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.stock-badge.in-stock {
+    color: #617408;
+
+    background: rgba(122, 144, 11, 0.1);
+}
+
+
+.stock-badge.out-of-stock {
+    color: #9a5a32;
+
+    background: rgba(154, 90, 50, 0.1);
+}
+
+
+/* =====================================================
+   EDIT BUTTON
+===================================================== */
+
+.edit-button {
+    padding: 8px 13px;
+
+    border: 1px solid #d9ded8;
+
+    background: #ffffff;
+
+    color: #011d19;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.edit-button:hover {
+    border-color: #7a900b;
+
+    background: #7a900b;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   TABLE MESSAGES
+===================================================== */
+
+.table-message {
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6e1;
+
+    color: #858c89;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+.error-message {
+    color: #a34f3d;
+}
+
+/* =====================================================
+   EDIT VEHICLE MODAL
+===================================================== */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(1, 29, 25, 0.45);
+
+    z-index: 100;
+}
+
+
+.edit-modal {
+    width: 100%;
+    max-width: 460px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6e1;
+
+    box-shadow: 0 20px 50px rgba(1, 29, 25, 0.15);
+}
+
+
+.modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #edf0ec;
+}
+
+
+.modal-header h2 {
+    color: #011d19;
+
+    font-size: 23px;
+
+    font-weight: 600;
+}
+
+
+.modal-close {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #e2e6e1;
+
+    background: #ffffff;
+
+    color: #69716e;
+
+    font-family: inherit;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+.modal-close:hover {
+    background: #f5f6f3;
+
+    color: #011d19;
+}
+
+
+/* =====================================================
+   MODAL VEHICLE NAME
+===================================================== */
+
+.modal-vehicle-name {
+    margin-top: 20px;
+
+    padding: 13px 15px;
+
+    background: #f5f6f3;
+
+    color: #011d19;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+#editVehicleForm {
+    margin-top: 22px;
+}
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #4f5855;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    height: 43px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d9ded8;
+
+    background: #ffffff;
+
+    color: #011d19;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #7a900b;
+
+    box-shadow: 0 0 0 3px rgba(122, 144, 11, 0.08);
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.edit-message {
+    min-height: 18px;
+
+    margin-bottom: 5px;
+
+    color: #a34f3d;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MODAL ACTIONS
+===================================================== */
+
+.modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.cancel-button,
+.save-button {
+    min-height: 40px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d9ded8;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.cancel-button {
+    background: #ffffff;
+
+    color: #4f5855;
+}
+
+
+.cancel-button:hover {
+    background: #f5f6f3;
+}
+
+
+.save-button {
+    border-color: #7a900b;
+
+    background: #7a900b;
+
+    color: #ffffff;
+}
+
+
+.save-button:hover {
+    background: #617408;
+
+    border-color: #617408;
+}
+
+
+.save-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   MOBILE MODAL
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .edit-modal {
+        padding: 22px;
+    }
+
+
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .cancel-button,
+    .save-button {
+        width: 100%;
+    }
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .admin-sidebar {
+        width: 225px;
+    }
+
+
+    .vehicles-main {
+        width: calc(100% - 225px);
+
+        margin-left: 225px;
+
+        padding: 35px 30px 45px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .admin-dashboard {
+        display: block;
+    }
+
+
+    .admin-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px 16px;
+    }
+
+
+    .sidebar-brand {
+        padding-bottom: 18px;
+    }
+
+
+    .sidebar-navigation {
+        margin-top: 20px;
+    }
+
+
+    .sidebar-nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+
+    .sidebar-link {
+        min-height: 43px;
+
+        font-size: 12px;
+    }
+
+
+    .sidebar-bottom {
+        margin-top: 12px;
+    }
+
+
+    .vehicles-main {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 28px 17px 40px;
+    }
+
+
+    .vehicles-header {
+        margin-bottom: 32px;
+    }
+
+
+    .vehicles-header h1 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .sidebar-nav {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vehicles-main {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+}

@@ -1,0 +1,1194 @@
+/* =========================================================
+   RIDEHUB OFFERS PAGE
+   ========================================================= */
+
+:root {
+    --primary: #7a900b;
+    --primary-light: #9aad20;
+
+    --dark: #011d19;
+    --dark-2: #07110f;
+    --black: #050706;
+
+    --light: #f7f8f6;
+    --white: #ffffff;
+
+    --text-dark: #111614;
+    --text-muted: #68716d;
+
+    --border: rgba(1, 29, 25, 0.12);
+
+    --container: 1320px;
+
+    --radius: 5px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Google Sans Flex", Arial, sans-serif;
+    background: var(--light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(var(--container), calc(100% - 80px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.offers-header {
+    height: 82px;
+    background: var(--black);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    width: min(var(--container), calc(100% - 80px));
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    font-size: 1.65rem;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.brand-ride {
+    color: var(--primary);
+}
+
+.brand-hub {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   BACK HOME
+   ========================================================= */
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.92rem;
+    font-weight: 540;
+
+    transition: var(--transition);
+}
+
+.back-arrow {
+    font-size: 1.2rem;
+    transition: transform var(--transition);
+}
+
+.back-home:hover {
+    color: var(--primary);
+}
+
+.back-home:hover .back-arrow {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.offers-intro {
+    padding: 62px 0 48px;
+    background: var(--light);
+}
+
+.intro-content {
+    max-width: 700px;
+}
+
+.section-label {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 2.2px;
+
+    margin-bottom: 12px;
+}
+
+.offers-intro h1 {
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    line-height: 0.98;
+
+    font-weight: 600;
+    letter-spacing: -2px;
+
+    color: var(--dark);
+}
+
+.offers-intro h1 span {
+    color: var(--primary);
+}
+
+.offers-intro p {
+    margin-top: 17px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   CURRENT OFFERS
+   ========================================================= */
+
+.current-offers {
+    padding: 15px 0 75px;
+    background: var(--light);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.section-heading .section-label {
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 1.75rem;
+    line-height: 1;
+
+    font-weight: 600;
+    letter-spacing: -0.7px;
+
+    color: var(--dark);
+}
+
+.section-heading > p {
+    max-width: 360px;
+
+    color: var(--text-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   OFFER GRID
+   ========================================================= */
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   OFFER CARD
+   ========================================================= */
+
+.offer-card {
+    position: relative;
+
+    min-height: 365px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f5f7f4 100%
+        );
+
+    border: 1px solid rgba(1, 29, 25, 0.1);
+
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+
+/* Green vertical accent */
+
+.offer-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 0;
+
+    background: var(--primary);
+
+    transition: height 0.4s ease;
+}
+
+
+/* Hover */
+
+.offer-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(122, 144, 11, 0.4);
+
+    box-shadow:
+        0 18px 45px rgba(1, 29, 25, 0.11);
+}
+
+.offer-card:hover::before {
+    height: 100%;
+}
+
+/* =========================================================
+   OFFER STATUS
+========================================================= */
+
+.offer-card {
+    position: relative;
+}
+
+.offer-status {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    padding: 5px 9px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    background: rgba(122, 144, 11, 0.1);
+    color: #617408;
+}
+
+.offer-status.inactive {
+    background: rgba(154, 90, 50, 0.1);
+    color: #9a5a32;
+}
+
+/* =========================================================
+   OFFER NUMBER
+   ========================================================= */
+
+.offer-number {
+    color: var(--primary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 34px;
+}
+
+
+/* =========================================================
+   OFFER CONTENT
+   ========================================================= */
+
+.offer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.offer-content h3 {
+    font-size: 1.37rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+
+    color: var(--dark);
+
+    margin-bottom: 18px;
+}
+
+.offer-description {
+    max-width: 320px;
+
+    font-size: 0.93rem;
+    line-height: 1.65;
+
+    color: #59625e;
+}
+
+.offer-detail {
+    margin-top: 25px;
+
+    display: inline-block;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: var(--dark);
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid rgba(122, 144, 11, 0.5);
+}
+
+
+/* =========================================================
+   KNOW MORE
+   ========================================================= */
+
+.know-more {
+    align-self: flex-start;
+
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 17px;
+
+    background: var(--dark);
+    color: var(--white);
+
+    border-radius: 3px;
+
+    font-size: 0.80rem;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    transition: var(--transition);
+}
+
+.know-more span {
+    color: var(--primary);
+
+    transition: transform var(--transition);
+}
+
+.know-more:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.know-more:hover span {
+    color: var(--white);
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   FESTIVAL OFFER
+   ========================================================= */
+
+.festival-offer {
+    position: relative;
+
+    min-height: 410px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("../img/offers/festival-offer.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   FESTIVAL OVERLAY
+   ========================================================= */
+
+.festival-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.66) 40%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+}
+
+
+/* =========================================================
+   FESTIVAL CONTENT
+   ========================================================= */
+
+.festival-container {
+    position: relative;
+    z-index: 2;
+}
+
+.festival-content {
+    max-width: 600px;
+
+    padding: 55px 0;
+}
+
+.festival-label {
+    display: block;
+
+    color: var(--primary-light);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 17px;
+}
+
+.festival-content h2 {
+    color: var(--white);
+
+    font-size: clamp(2.2rem, 4vw, 3.7rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -1.8px;
+
+    font-weight: 600;
+}
+
+.festival-content h2 span {
+    color: var(--primary-light);
+}
+
+.festival-content > p {
+    max-width: 510px;
+
+    margin-top: 24px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FESTIVAL BENEFITS
+   ========================================================= */
+
+.festival-benefits {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 24px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 1.3px;
+}
+
+.festival-benefits i {
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+}
+
+
+/* =========================================================
+   FESTIVAL BUTTON
+   ========================================================= */
+
+.festival-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 27px;
+
+    padding: 12px 20px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    border-radius: 3px;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.festival-btn span {
+    transition: transform var(--transition);
+}
+
+.festival-btn:hover {
+    background: var(--primary-light);
+}
+
+.festival-btn:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.offer-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.offer-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   MODAL BACKDROP
+   ========================================================= */
+
+.modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    backdrop-filter: blur(7px);
+}
+
+
+/* =========================================================
+   MODAL BOX
+   ========================================================= */
+
+.modal-box {
+    position: relative;
+    z-index: 2;
+
+    width: min(560px, 100%);
+
+    padding: 40px;
+
+    background: #f8f9f7;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(20px);
+
+    transition: transform 0.35s ease;
+}
+
+.offer-modal.active .modal-box {
+    transform: translateY(0);
+}
+
+
+/* Close X */
+
+.modal-close {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 32px;
+    height: 32px;
+
+    background: transparent;
+
+    color: #56605b;
+
+    font-size: 1.5rem;
+
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    color: var(--primary);
+}
+
+
+/* Modal label */
+
+.modal-label {
+    color: var(--primary);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.modal-box h2 {
+    margin-top: 10px;
+
+    color: var(--dark);
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.modal-line {
+    width: 45px;
+    height: 3px;
+
+    margin: 18px 0;
+
+    background: var(--primary);
+}
+
+.modal-box > p {
+    color: #5f6964;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.modal-details {
+    margin-top: 25px;
+
+    display: grid;
+    gap: 18px;
+}
+
+.modal-detail-item {
+    padding: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 4px;
+}
+
+.detail-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-size: 0.66rem;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+.modal-detail-item p {
+    color: var(--text-dark);
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.terms {
+    margin-top: 20px;
+
+    font-size: 0.7rem !important;
+
+    color: #7a827e !important;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+   ========================================================= */
+
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.modal-enquire {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 17px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    border-radius: 3px;
+
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.modal-enquire:hover {
+    background: var(--dark);
+}
+
+.modal-enquire span {
+    transition: transform var(--transition);
+}
+
+.modal-enquire:hover span {
+    transform: translateX(4px);
+}
+
+.modal-close-btn {
+    padding: 11px 17px;
+
+    background: transparent;
+
+    color: var(--dark);
+
+    border: 1px solid rgba(1, 29, 25, 0.18);
+
+    border-radius: 3px;
+
+    font-size: 0.76rem;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: var(--dark);
+
+    color: var(--white);
+
+    padding: 60px 0 25px;
+}
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+}
+
+.footer-brand {
+    max-width: 330px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 17px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.56);
+
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h4 {
+    color: var(--white);
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 19px;
+}
+
+.footer-column a,
+.footer-column p {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.92rem;
+
+    line-height: 1.5;
+
+    margin-bottom: 9px;
+
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--primary-light);
+}
+
+.footer-contact p {
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 0.75rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 50%;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 0.58rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .container,
+    .header-container {
+        width: min(100% - 50px, var(--container));
+    }
+
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-card:last-child {
+        grid-column: span 2;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .festival-offer {
+        min-height: 340px;
+        background-size: cover;
+        background-position: 62% center;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .container,
+    .header-container {
+        width: calc(100% - 36px);
+    }
+
+
+    /* Header */
+
+    .offers-header {
+        height: 70px;
+    }
+
+    .brand {
+        font-size: 1.4rem;
+    }
+
+    .back-home {
+        font-size: 0.72rem;
+    }
+
+
+    /* Intro */
+
+    .offers-intro {
+        padding: 45px 0 35px;
+    }
+
+    .offers-intro h1 {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    .offers-intro p {
+        font-size: 0.86rem;
+    }
+
+
+    /* Current Offers */
+
+    .current-offers {
+        padding-bottom: 50px;
+    }
+
+    .section-heading {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-heading > p {
+        margin-top: 12px;
+
+        text-align: left;
+
+        font-size: 0.8rem;
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .offer-card:last-child {
+        grid-column: auto;
+    }
+
+    .offer-card {
+        min-height: 330px;
+
+        padding: 25px;
+    }
+
+
+    /* Festival */
+
+    .festival-offer {
+    min-height: 350px;
+
+    background-size: cover;
+    background-position: 80% center;
+    }
+
+    .festival-content {
+        padding: 35px 0;
+    }
+
+    .festival-content h2 {
+        font-size: 2.45rem;
+    }
+
+    .festival-content > p {
+        margin-top: 20px;
+
+        font-size: 0.84rem;
+    }
+
+    .festival-benefits {
+        flex-wrap: wrap;
+
+        line-height: 1.8;
+
+        gap: 8px;
+    }
+
+
+    /* Modal */
+
+    .modal-box {
+        padding: 30px 24px;
+    }
+
+    .modal-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal-enquire,
+    .modal-close-btn {
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        padding-top: 45px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 35px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+}

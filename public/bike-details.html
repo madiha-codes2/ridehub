@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicle Details | RideHub</title>
+
+    <meta name="description"
+          content="Explore vehicle specifications, features and finance options at RideHub.">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,300..700&display=swap"
+          rel="stylesheet">
+
+    <!-- Common RideHub CSS -->
+    <link rel="stylesheet"
+          href="css/styles.css">
+
+    <!-- Details Page CSS -->
+    <link rel="stylesheet"
+          href="css/bike-details.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER / NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html"
+           class="logo">
+
+            <span class="logo-green">Ride</span>Hub
+
+        </a>
+
+
+        <nav class="navbar">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bikes.html"
+                       class="active">
+                        Bikes/Scooters
+                    </a>
+                </li>
+
+                <li>
+                    <a href="offers.html">
+                        Offers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <a href="enquiry.html"
+           class="btn enquire-btn">
+
+            Enquire Now
+
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <div class="hamburger">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     VEHICLE DETAILS
+===================================================== -->
+
+<main class="details-page">
+
+
+    <!-- =================================================
+         MAIN VEHICLE SECTION
+    ================================================== -->
+
+    <section class="vehicle-main">
+
+        <div class="container vehicle-main-grid">
+
+
+            <!-- =========================================
+                 LEFT - IMAGE GALLERY
+            ========================================== -->
+
+            <div class="vehicle-gallery">
+
+
+                <!-- Main Image -->
+
+                <div class="main-image-box">
+
+                    <img id="main-vehicle-image"
+                         src=""
+                         alt="Vehicle">
+
+                    <div class="image-placeholder"
+                         id="imagePlaceholder">
+
+                        VEHICLE IMAGE
+
+                    </div>
+
+                </div>
+
+
+                <!-- Thumbnails -->
+
+                <div class="vehicle-thumbnails">
+
+                    <button class="thumbnail active"
+                            data-image="0">
+
+                        <span>IMG</span>
+
+                    </button>
+
+                    <button class="thumbnail"
+                            data-image="1">
+
+                        <span>IMG</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 RIGHT - VEHICLE INFORMATION
+            ========================================== -->
+
+            <div class="vehicle-info">
+
+                <h1 id="vehicleName">
+
+                    TVS Apache RTR 160 4V
+
+                </h1>
+
+
+                <p class="vehicle-tagline"
+                   id="vehicleTagline">
+
+                    Racing DNA Unleashed
+
+                </p>
+
+
+                <div class="vehicle-price-row">
+
+                    <div>
+
+                        <span class="price-label">
+                            Ex-Showroom Price
+                        </span>
+
+                        <h2 id="vehicle-price">
+                            ₹ 1,23,320
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Divider -->
+
+                <div class="info-divider"></div>
+
+
+                <!-- Quick information -->
+
+                            <div class="quick-info">
+
+                <div class="quick-info-item">
+
+                    <span>Engine</span>
+
+                    <strong id="quick-engine">
+                        159.7 cc
+                    </strong>
+
+                </div>
+
+
+                <div class="quick-info-item">
+
+                    <span>Power</span>
+
+                    <strong id="quick-power">
+                        16.04 PS
+                    </strong>
+
+                </div>
+
+
+                <div class="quick-info-item">
+
+                    <span>Mileage</span>
+
+                    <strong id="quick-mileage">
+                        45 km/l
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+                <!-- Action Buttons -->
+
+                <div class="vehicle-actions">
+
+                    <a href="#"
+                       class="btn primary-btn"
+                       id="vehicleEnquireBtn">
+
+                        Enquire Now
+
+                    </a>
+
+
+                    <button type="button"
+                            class="btn secondary-btn"
+                            id="scrollToEmi">
+
+                        EMI Options
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INFORMATION SECTION
+    ================================================== -->
+
+    <section class="vehicle-information">
+
+        <div class="container information-grid">
+
+
+            <!-- =========================================
+                 LEFT - SPECIFICATIONS / FEATURES
+            ========================================== -->
+
+            <div class="vehicle-overview">
+
+
+                <!-- Tabs -->
+
+                <div class="details-tabs">
+
+                    <button class="details-tab active"
+                            data-tab="specifications">
+
+                        SPECIFICATIONS
+
+                    </button>
+
+
+                    <button class="details-tab"
+                            data-tab="features">
+
+                        FEATURES
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Specifications -->
+
+                <div class="tab-content active"
+                     id="specifications">
+
+                    <div class="spec-grid">
+
+                        <div class="spec-item">
+
+                            <span>Engine</span>
+
+                            <strong id="spec-engine">
+                                159.7 cc
+                            </strong>
+
+                        </div>
+
+
+                        <div class="spec-item">
+
+                            <span>Power</span>
+
+                            <strong id="spec-power">
+                                16.04 PS
+                            </strong>
+
+                        </div>
+
+
+                        <div class="spec-item">
+
+                            <span>Mileage</span>
+
+                            <strong id="spec-mileage">
+                                45 km/l
+                            </strong>
+
+                        </div>
+
+
+                        <div class="spec-item">
+
+                            <span>Gearbox</span>
+
+                            <strong id="spec-gearbox">
+                                5 Speed
+                            </strong>
+
+                        </div>
+
+
+                        <div class="spec-item">
+
+                            <span>Fuel Tank</span>
+
+                            <strong id="spec-fuel">
+                                12 L
+                            </strong>
+
+                        </div>
+
+
+                        <div class="spec-item">
+
+                            <span>Kerb Weight</span>
+
+                            <strong id="spec-weight">
+                                147 kg
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Features -->
+
+                <div class="tab-content"
+                     id="features">
+
+                    <div class="features-list"
+                        id="features-list">
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                Race Tuned Fuel Injection
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                4 Valve Oil-Cooled Engine
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                SmartXonnect with Bluetooth
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                Dual Channel ABS
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                LED Headlamp
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                Digital Instrument Cluster
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 RIGHT - EMI CARD
+            ========================================== -->
+
+            <aside class="emi-card"
+                   id="emiCard">
+
+
+                <div class="emi-heading">
+
+                    <span class="emi-label">
+                        FINANCE
+                    </span>
+
+                    <h2>
+                        EMI OPTIONS
+                    </h2>
+
+                    <p>
+                        Easy finance options for your ride.
+                    </p>
+
+                </div>
+
+
+            <div class="emi-fields">
+
+                <!-- Vehicle Price -->
+
+                <div class="emi-field">
+
+                    <label for="vehicleAmount">
+                        Vehicle Price
+                    </label>
+
+                    <input type="number"
+                           id="vehicleAmount"
+                           value="123320">
+
+                </div>
+
+
+                <!-- Down Payment -->
+
+                <div class="emi-field">
+
+                    <label for="downPayment">
+                        Down Payment
+                    </label>
+
+                    <input type="number"
+                           id="downPayment"
+                           value="15000">
+
+                </div>
+
+
+                <!-- Loan Duration -->
+
+                <div class="emi-field">
+
+                    <label for="loanDuration">
+                        Loan Duration
+                    </label>
+
+                    <select id="loanDuration">
+
+                        <option value="12">
+                            12 Months
+                        </option>
+
+                        <option value="24">
+                            24 Months
+                        </option>
+
+                        <option value="36"
+                                selected>
+                            36 Months
+                        </option>
+
+                        <option value="48">
+                            48 Months
+                        </option>
+
+                        <option value="60">
+                            60 Months
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Interest -->
+
+                <div class="emi-field">
+
+                    <label for="interestRate">
+                        Interest Rate (%)
+                    </label>
+
+                    <input type="number"
+                           id="interestRate"
+                           value="9.7"
+                           step="0.1">
+
+                </div>
+
+            </div>
+
+                <!-- Calculate -->
+
+                <button type="button"
+                        class="emi-calculate"
+                        id="calculateEmi">
+
+                    Calculate EMI
+
+                </button>
+
+
+                <!-- Result -->
+
+                <div class="emi-result">
+
+                    <span>
+                        Estimated EMI
+                    </span>
+
+                    <strong id="emiResult">
+
+                        ₹ 3,999 /month
+
+                    </strong>
+
+                </div>
+
+
+                <small class="emi-note">
+
+                    *Illustrative EMI only. Actual finance
+                    terms may vary.
+
+                </small>
+
+            </aside>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- JavaScript -->
+
+<script src="js/main.js"></script>
+
+<script src="js/bike-details.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,764 @@
+/* =====================================================
+   BIKES & SCOOTERS PAGE
+===================================================== */
+
+
+/* =====================================================
+   PAGE BACKGROUND
+===================================================== */
+
+.vehicle-page {
+
+    background: #f7f8fa;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   PAGE INTRO
+===================================================== */
+
+.vehicle-intro {
+
+    padding-top: 115px;
+    padding-bottom: 35px;
+
+    background: #f5f7ee;
+
+}
+
+.vehicle-intro h1 {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+
+}
+
+.vehicle-intro h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 4px;
+
+    margin-top: 10px;
+
+    background: #7a900b;
+
+    border-radius: 2px;
+}
+
+.vehicle-intro > .container > p {
+
+    margin-top: 8px;
+    margin-bottom: 28px;
+
+    color: #555;
+
+    font-size: 1rem;
+
+}
+
+
+/* =====================================================
+   VEHICLE TABS
+===================================================== */
+
+.vehicle-tabs {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    border-bottom: 1px solid #e2e2e2;
+
+}
+
+.vehicle-tab {
+
+    position: relative;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0 0 14px;
+
+    color: #555;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: color .3s ease;
+
+}
+
+.vehicle-tab::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 0;
+    height: 3px;
+
+    background: #7a900b;
+
+    transition: width .3s ease;
+
+}
+
+.vehicle-tabs .tab.active {
+    color: #ffffff;
+    background: #7a900b;
+    border-color: #7a900b;
+}
+
+.vehicle-tab.active {
+
+    color: #7a900b;
+
+}
+
+.vehicle-tab.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   MAIN LISTING AREA
+===================================================== */
+
+.vehicle-listing {
+
+    padding: 15px 0 70px;
+
+}
+
+.vehicle-layout {
+
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+    
+    align-items: start;
+
+}
+
+
+/* =====================================================
+   FILTER SIDEBAR
+===================================================== */
+
+.filter-sidebar {
+
+    background: #f8f9f3;
+    border: 1px solid #e4e8d5;
+
+    border-radius: 8px;
+
+    padding: 24px;
+
+    margin-right: 28px;
+
+    position: sticky;
+
+    top: 110px;
+
+}
+
+.filter-header {
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+.filter-header h2 {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FILTER GROUP
+===================================================== */
+
+.filter-group {
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+.filter-group h3 {
+
+    margin: 0 0 15px;
+
+    color: #011d19;
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   PRICE INPUTS
+===================================================== */
+
+.price-inputs {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.price-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+.price-field label {
+
+    color: #666;
+
+    font-size: .78rem;
+
+}
+
+.price-field input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 11px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    color: #011d19;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: .85rem;
+
+    transition: border-color .25s ease;
+
+}
+
+.price-field input:focus {
+
+    border-color: #7a900b;
+
+}
+
+
+/* =====================================================
+   SORT DROPDOWN
+===================================================== */
+
+.filter-group select {
+
+    width: 100%;
+
+    padding: 10px 11px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: .85rem;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+.filter-group select:focus {
+
+    border-color: #7a900b;
+
+}
+
+
+/* =====================================================
+   FILTER BUTTONS
+===================================================== */
+
+.filter-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding-top: 22px;
+
+}
+
+.filter-actions .primary-btn {
+
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+.clear-btn {
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border: 1px solid #d4d4d4;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
+}
+
+.clear-btn:hover {
+
+    border-color: #7a900b;
+
+    color: #7a900b;
+
+}
+
+
+/* =====================================================
+   VEHICLE CONTENT
+===================================================== */
+
+.vehicle-content {
+
+    min-width: 0;
+
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.vehicle-category {
+
+    scroll-margin-top: 115px;
+
+}
+
+.scooter-category {
+
+    margin-top: 65px;
+
+    padding-top: 50px;
+
+    border-top: 1px solid #e2e2e2;
+
+}
+
+
+/* =====================================================
+   CATEGORY HEADING
+===================================================== */
+
+.category-heading {
+
+    margin-bottom: 22px;
+
+}
+
+.category-heading h2 {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+
+}
+
+.category-heading p {
+
+    margin: 5px 0 0;
+
+    color: #777;
+
+    font-size: .9rem;
+
+}
+
+
+/* =====================================================
+   VEHICLE GRID
+===================================================== */
+
+.vehicle-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+
+/* =====================================================
+   VEHICLE CARD
+===================================================== */
+
+.vehicle-card {
+
+    display: block;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e4e5;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+}
+
+.vehicle-card:hover {
+
+    border-color: #7a900b;
+    box-shadow: 0 8px 22px rgba(1, 29, 25, 0.10);
+    transform: translateY(-3px);
+
+}
+
+.vehicle-card:hover .vehicle-image img {
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   EMPTY VEHICLE IMAGE AREA
+===================================================== */
+
+.vehicle-image {
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    overflow: hidden;
+
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.vehicle-image span {
+
+    color: #b4b4b4;
+
+    font-size: .75rem;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
+
+}
+
+
+/* =====================================================
+   VEHICLE INFORMATION
+===================================================== */
+
+.vehicle-info {
+
+    padding: 15px 16px 17px;
+
+    background: #fafafa; /* #eef2dc */
+
+}
+
+.vehicle-info h3 {
+
+    margin: 0 0 7px;
+
+    color: #222;
+
+    font-size: .98rem;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+
+}
+
+.vehicle-info p {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: .92rem;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .vehicle-layout {
+
+        grid-template-columns: 28% 72%;
+
+    }
+
+    .vehicle-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+    .filter-sidebar {
+
+        margin-right: 20px;
+
+        padding: 20px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .vehicle-intro {
+
+        padding-top: 120px;
+
+        padding-bottom: 25px;
+
+    }
+
+    .vehicle-intro h1 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .vehicle-tabs {
+
+        gap: 25px;
+
+    }
+
+    .vehicle-layout {
+
+        display: block;
+
+    }
+
+    .filter-sidebar {
+
+        position: static;
+
+        margin-right: 0;
+
+        margin-bottom: 30px;
+
+    }
+
+    .vehicle-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
+    .vehicle-image {
+
+        height: 210px;
+
+    }
+
+    .scooter-category {
+
+        margin-top: 50px;
+
+        padding-top: 40px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .vehicle-intro {
+
+        padding-top: 105px;
+
+    }
+
+    .vehicle-intro h1 {
+
+        font-size: 1.5rem;
+
+    }
+
+    .vehicle-intro > .container > p {
+
+        font-size: .9rem;
+
+        line-height: 1.5;
+
+    }
+
+    .vehicle-tab {
+
+        font-size: .85rem;
+
+    }
+
+    .category-heading h2 {
+
+        font-size: 1.25rem;
+
+    }
+
+    .vehicle-image {
+
+        height: 200px;
+
+    }
+
+}
+
+/* =========================================
+   VEHICLE STOCK STATUS
+========================================= */
+
+.stock-status {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.89rem;
+    font-weight: 600;
+}
+
+.stock-status.in-stock {
+    color: #617408;
+}
+
+.stock-status.out-of-stock {
+    color: #b33a3a;
+}

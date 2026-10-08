@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | RideHub</title>
+
+    <!-- Google Sans Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span>Ride</span><strong>Hub</strong>
+    </a>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="bikes.html">Bikes/Scooters</a>
+
+        <a href="offers.html">Offers</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="contact.html" class="active">Contact</a>
+
+    </nav>
+
+    <a href="enquiry.html" class="enquire-btn">
+        Enquire Now
+    </a>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+    <!-- =================================================
+         CONTACT INTRO
+    ================================================== -->
+
+    <section class="contact-intro">
+
+        <p class="section-label">GET IN TOUCH</p>
+
+        <h1>CONTACT US</h1>
+
+        <p class="intro-text">
+            We'd love to hear from you
+        </p>
+
+    </section>
+
+
+    <!-- =================================================
+         CONTACT AREA
+    ================================================== -->
+
+    <section class="contact-area">
+
+        <!-- =============================================
+             CONTACT FORM
+        ============================================== -->
+
+        <div class="contact-card">
+
+            <div class="card-heading">
+
+                <p class="card-label">SEND AN ENQUIRY</p>
+
+                <h2>Send Us a Message</h2>
+
+            </div>
+
+
+            <form id="contactForm" novalidate>
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                    >
+
+                    <small class="error-message" id="nameError"></small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <small class="error-message" id="emailError"></small>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        inputmode="numeric"
+                        maxlength="10"
+                        autocomplete="tel"
+                    >
+
+                    <small class="error-message" id="phoneError"></small>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="How can we help you?"
+                    ></textarea>
+
+                    <small class="error-message" id="messageError"></small>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="send-btn"
+                >
+                    Send Message
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <p
+                    class="success-message"
+                    id="successMessage"
+                >
+                    Your message has been received. We'll get back to you soon.
+                </p>
+
+            </form>
+
+        </div>
+
+
+        <!-- =============================================
+             SHOWROOM DETAILS
+        ============================================== -->
+
+        <div class="showroom-card">
+
+            <div class="card-heading">
+
+                <p class="card-label">VISIT RIDEHUB</p>
+
+                <h2>SHOWROOM DETAILS</h2>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="detail-content">
+
+                    <h3>LOCATION</h3>
+
+                    <p>
+                        Sahara Motors<br>
+                        Asmita Jyoti Complex,<br>
+                        Malad - Marve Rd (West),<br>
+                        Mumbai - 400095
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="detail-content">
+
+                    <h3>PHONE</h3>
+
+                    <p>
+                        089766 27526
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="detail-content">
+
+                    <h3>EMAIL</h3>
+
+                    <p>
+                        info@saharamotors.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPENING HOURS -->
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div class="detail-content">
+
+                    <h3>OPENING HOURS</h3>
+
+                    <p>
+                        <strong>Monday – Sunday</strong><br>
+                        11:00 AM – 10:00 PM
+                    </p>
+
+                    <p class="secondary-hours">
+                        <strong>Festival Holidays</strong><br>
+                        Showroom Closed
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FIND US
+    ================================================== -->
+
+    <section class="map-section">
+
+        <div class="map-heading">
+
+            <p class="section-label">OUR LOCATION</p>
+
+            <h2>FIND US</h2>
+
+        </div>
+
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=19.196384,72.8271578&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="RideHub Showroom Location"
+            ></iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     COMPACT FOOTER
+===================================================== -->
+
+<footer class="contact-footer">
+
+    <div class="footer-inner">
+
+        <!-- RideHub Logo -->
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="ride">Ride</span><span class="hub">Hub</span>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="bikes.html">Bikes/Scooters</a>
+            <a href="offers.html">Offers</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </div>
+
+        <!-- Visit Us -->
+        <div class="footer-column">
+            <h3>VISIT US</h3>
+
+            <p>RideHub Showroom</p>
+            <p>Mumbai - 400095, India</p>
+            <p>Mon – Sun</p>
+            <p>11:00 AM – 10:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 RideHub. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script src="js/contact.js"></script>
+
+</body>
+</html>

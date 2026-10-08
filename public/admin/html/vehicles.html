@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Vehicles | RideHub Admin</title>
+
+    <!-- Google Sans Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Vehicles CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/vehicles.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="admin-dashboard">
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="admin-sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="sidebar-logo">
+                    <span>Ride</span>Hub
+                </div>
+
+                <div class="sidebar-admin-label">
+                    ADMIN PANEL
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-navigation">
+
+                <p class="nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <nav class="sidebar-nav">
+
+                    <!-- Dashboard -->
+
+                    <a
+                        href="dashboard.html"
+                        class="sidebar-link"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+
+                    <!-- Vehicles -->
+
+                    <a
+                        href="vehicles.html"
+                        class="sidebar-link active"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M5 17h14" />
+
+                            <path d="M6 17l1.5-6h9L19 17" />
+
+                            <circle
+                                cx="7"
+                                cy="17"
+                                r="2"
+                            />
+
+                            <circle
+                                cx="17"
+                                cy="17"
+                                r="2"
+                            />
+
+                            <path d="M8 11l2-4h4l2 4" />
+
+                        </svg>
+
+                        <span>Vehicles</span>
+
+                    </a>
+
+
+                    <!-- Offers -->
+
+                    <a
+                        href="admin-offers.html"
+                        class="sidebar-link"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7" />
+
+                            <path d="M2 7h20v5H2z" />
+
+                            <path d="M12 7v14" />
+
+                            <path d="M12 7H8.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Z" />
+
+                            <path d="M12 7h3.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z" />
+
+                        </svg>
+
+                        <span>Offers</span>
+
+                    </a>
+
+
+                    <!-- Enquiries -->
+
+                    <a
+                        href="admin-enquiries.html"
+                        class="sidebar-link"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="3"
+                                y="5"
+                                width="18"
+                                height="14"
+                                rx="2"
+                            />
+
+                            <path d="m3 7 9 6 9-6" />
+
+                        </svg>
+
+                        <span>Enquiries</span>
+
+                    </a>
+
+
+                    <!-- Contact Messages -->
+
+                    <a
+                        href="admin-contact.html"
+                        class="sidebar-link"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.7-4.2A8.2 8.2 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5Z"
+                            />
+
+                        </svg>
+
+                        <span>Contact Messages</span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-divider"></div>
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                    class="logout-button"
+                >
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M10 17l5-5-5-5" />
+
+                        <path d="M15 12H3" />
+
+                        <path d="M21 19V5a2 2 0 0 0-2-2h-5" />
+
+                    </svg>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="vehicles-main">
+
+
+            <!-- Header -->
+
+            <header class="vehicles-header">
+
+                <div>
+
+                    <p class="dashboard-eyebrow">
+                        RIDEHUB ADMIN
+                    </p>
+
+                    <h1>
+                        Vehicles
+                    </h1>
+
+                    <p class="vehicles-subtitle">
+                        Manage your bikes and scooters.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- Vehicles Section -->
+
+            <section class="vehicles-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            All Vehicles
+                        </h2>
+
+                        <p>
+                            View and update your showroom vehicles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Loading -->
+
+                <div
+                    id="loadingMessage"
+                    class="table-message"
+                >
+                    Loading vehicles...
+                </div>
+
+
+                <!-- Error -->
+
+                <div
+                    id="errorMessage"
+                    class="table-message error-message"
+                    style="display: none;"
+                >
+                    Unable to load vehicles.
+                </div>
+
+
+                <!-- Table -->
+
+                <div
+                    class="vehicles-table-container"
+                    id="vehiclesTableContainer"
+                    style="display: none;"
+                >
+
+                    <table class="vehicles-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Vehicle</th>
+
+                                <th>Category</th>
+
+                                <th>Price</th>
+
+                                <th>Stock Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="vehiclesTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+<!-- =====================================================
+     EDIT VEHICLE MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay"
+    id="editModal"
+    style="display: none;"
+>
+
+    <div class="edit-modal">
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="dashboard-eyebrow">
+                    VEHICLE MANAGEMENT
+                </p>
+
+                <h2>
+                    Edit Vehicle
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeModalButton"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="modal-vehicle-name">
+            <span id="editVehicleName">
+                Vehicle Name
+            </span>
+        </div>
+
+
+        <form id="editVehicleForm">
+
+            <!-- Price -->
+
+            <div class="form-group">
+
+                <label for="editPrice">
+                    Price
+                </label>
+
+                <input
+                    type="number"
+                    id="editPrice"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Stock Status -->
+
+            <div class="form-group">
+
+                <label for="editStockStatus">
+                    Stock Status
+                </label>
+
+                <select
+                    id="editStockStatus"
+                    required
+                >
+
+                    <option value="In Stock">
+                        In Stock
+                    </option>
+
+                    <option value="Out of Stock">
+                        Out of Stock
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <p
+                id="editMessage"
+                class="edit-message"
+            ></p>
+
+
+            <!-- Buttons -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelEditButton"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                    id="saveVehicleButton"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+    <!-- JavaScript -->
+
+    <script src="../js/vehicles.js"></script>
+
+</body>
+
+</html>

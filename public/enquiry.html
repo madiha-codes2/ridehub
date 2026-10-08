@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RideHub | Enquire Now</title>
+
+    <meta name="description"
+          content="Send an enquiry about your preferred RideHub bike or scooter.">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,300..700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Enquiry CSS -->
+    <link rel="stylesheet" href="css/enquiry.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <!-- Logo -->
+
+        <a href="index.html"
+           class="logo">
+
+            <span class="logo-green">Ride</span>Hub
+
+        </a>
+
+
+        <!-- Navigation -->
+
+        <nav class="navbar">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bikes.html">
+                        Bikes/Scooters
+                    </a>
+                </li>
+
+                <li>
+                    <a href="offers.html">
+                        Offers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- Enquire Button -->
+
+        <a href="enquiry.html"
+           class="btn enquire-btn active">
+
+            Enquire Now
+
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <div class="hamburger">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ENQUIRY PAGE
+===================================================== -->
+
+<main class="enquiry-page">
+
+
+    <!-- =================================================
+         PAGE INTRO
+    ================================================== -->
+
+    <section class="enquiry-intro">
+
+        <div class="container">
+
+            <h1>
+                ENQUIRE NOW
+            </h1>
+
+            <p>
+                Interested in a bike or scooter?
+                Send us your enquiry and our team will
+                get back to you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ENQUIRY SECTION
+    ================================================== -->
+
+    <section class="enquiry-section">
+
+        <div class="container enquiry-container">
+
+
+            <!-- =========================================
+                 LEFT INFORMATION
+            ========================================== -->
+
+            <div class="enquiry-info">
+
+                <span class="enquiry-label">
+                    RIDEHUB
+                </span>
+
+                <h2>
+                    INTERESTED IN A
+                    <span>NEW RIDE?</span>
+                </h2>
+
+                <p>
+                    Choose your vehicle and send us your
+                    requirements. Our team will help you
+                    find the right ride for you.
+                </p>
+
+
+                <!-- Benefits -->
+
+                <div class="enquiry-benefits">
+
+                    <div class="benefit-item">
+
+                        <span class="benefit-icon">✓</span>
+
+                        <span>
+                            Easy Enquiry
+                        </span>
+
+                    </div>
+
+
+                    <div class="benefit-item">
+
+                        <span class="benefit-icon">✓</span>
+
+                        <span>
+                            Quick Response
+                        </span>
+
+                    </div>
+
+
+                    <div class="benefit-item">
+
+                        <span class="benefit-icon">✓</span>
+
+                        <span>
+                            Showroom Assistance
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 FORM
+            ========================================== -->
+
+            <div class="enquiry-form-card">
+
+                <div class="form-heading">
+
+                    <span>
+                        ENQUIRY FORM
+                    </span>
+
+                    <h2>
+                        Send Your Enquiry
+                    </h2>
+
+                </div>
+
+
+                <form id="enquiryForm"
+                      novalidate>
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-field">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your name"
+                            autocomplete="name">
+
+                        <small class="field-error"
+                               id="nameError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Phone -->
+
+                    <div class="form-field">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            inputmode="numeric"
+                            maxlength="10"
+                            autocomplete="tel">
+
+                        <small class="field-error"
+                               id="phoneError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email">
+
+                        <small class="field-error"
+                               id="emailError">
+                        </small>
+
+                    </div>
+
+                    <!-- Vehicle -->
+
+                    <div class="form-field">
+
+                        <label for="vehicle">
+                            Vehicle
+                        </label>
+
+                        <select
+                            id="vehicle"
+                            name="vehicle">
+
+                            <option value="">
+                                Select a Bike/Scooter
+                            </option>
+
+                            <!-- Motorcycles -->
+
+                            <optgroup label="Motorcycles">
+
+                                <option value="apache-rtr-160-4v">
+                                    TVS Apache RTR 160 4V
+                                </option>
+
+                                <option value="yamaha-r15-v4">
+                                    Yamaha R15 V4
+                                </option>
+
+                                <option value="hunter-350">
+                                    Royal Enfield Hunter 350
+                                </option>
+
+                                <option value="apache-rtr-200-4v">
+                                    TVS Apache RTR 200 4V
+                                </option>
+
+                                <option value="pulsar-ns200">
+                                    Bajaj Pulsar NS200
+                                </option>
+
+                                <option value="gixxer-sf">
+                                    Suzuki Gixxer SF
+                                </option>
+
+                                <option value="hornet-2.0">
+                                    Honda Hornet 2.0
+                                </option>
+
+                            </optgroup>
+
+
+                            <!-- Scooters -->
+
+                            <optgroup label="Scooters">
+
+                                <option value="ntorq-125">
+                                    TVS Ntorq 125
+                                </option>
+
+                                <option value="jupiter-125">
+                                    TVS Jupiter 125
+                                </option>
+
+                                <option value="activa-6g">
+                                    Honda Activa 6G
+                                </option>
+
+                                <option value="access-125">
+                                    Suzuki Access 125
+                                </option>
+
+                                <option value="burgman">
+                                    Suzuki Burgman Street
+                                </option>
+
+                                <option value="aprilia-sr">
+                                    Aprilia SR
+                                </option>
+
+                                <option value="avenis">
+                                    Suzuki Avenis
+                                </option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <small class="field-error"
+                               id="vehicleError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div class="form-field">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Tell us what you're interested in..."></textarea>
+
+                        <small class="field-error"
+                               id="messageError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="btn enquiry-submit">
+
+                        Submit Enquiry
+
+                    </button>
+
+
+                    <!-- Success Message -->
+
+                    <div
+                        class="success-message"
+                        id="successMessage">
+
+                        <strong>
+                            Thank you!
+                        </strong>
+
+                        Your enquiry has been submitted successfully.
+                        Our team will contact you soon.
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- JavaScript -->
+
+<script src="js/main.js"></script>
+<script src="js/enquiry.js"></script>
+
+</body>
+
+</html>

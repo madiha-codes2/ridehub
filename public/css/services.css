@@ -1,0 +1,1029 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    background: #fbfafb;
+    color: #151515;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   COLOURS
+===================================================== */
+
+:root {
+    --dark: #011d19;
+    --dark-2: #071f1c;
+
+    --green: #7a900b;
+    --green-light: #a0b52a;
+
+    --white: #ffffff;
+    --light: #fbfafb;
+    --border: #e5e7e6;
+
+    --text: #171717;
+    --muted: #686d6b;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 55px;
+
+    background: var(--dark);
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    font-family: "Google Sans Flex", sans-serif;
+
+    font-size: 1.55rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.logo strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-links {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 45px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #ffffff;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    padding: 5px 0;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    transition: color var(--transition);
+}
+
+
+/* =====================================================
+   NAV HOVER
+===================================================== */
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+
+/* =====================================================
+   ACTIVE NAV
+===================================================== */
+
+.nav-links a.active {
+    color: var(--green);
+
+    background: transparent;
+
+    border: none;
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   NAV UNDERLINE
+===================================================== */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--green);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.contact-btn {
+    margin-left: auto;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 22px;
+
+    background: var(--green);
+
+    color: #ffffff;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border: 1px solid var(--green);
+    border-radius: 5px;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        transform 0.2s ease;
+}
+
+.contact-btn:hover {
+    background: #657900;
+    border-color: #657900;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+main {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0 55px;
+}
+
+
+/* =====================================================
+   SERVICES INTRO
+===================================================== */
+
+.services-intro {
+    text-align: center;
+
+    padding: 55px 0 30px;
+}
+
+.section-label {
+    margin-bottom: 8px;
+
+    color: var(--green);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.services-intro h1 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: 2.1rem;
+    font-weight: 650;
+
+    letter-spacing: -0.5px;
+}
+
+.intro-text {
+    margin-top: 6px;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   SERVICES SECTION
+===================================================== */
+
+.services-section {
+    width: 100%;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   SERVICE GRID
+===================================================== */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+.service-card {
+    min-width: 0;
+
+    height: 410px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(122, 144, 11, 0.35);
+
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   SERVICE CONTENT
+===================================================== */
+
+.service-content {
+    flex: 1;
+
+    padding: 25px 22px 15px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   SERVICE ICON
+===================================================== */
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(122, 144, 11, 0.10);
+
+    color: var(--green);
+
+    border-radius: 50%;
+
+    font-size: 1.15rem;
+}
+
+.service-card h2 {
+    margin-bottom: 8px;
+
+    color: var(--dark);
+
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    max-width: 230px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 0.88rem;
+
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   SERVICE IMAGE
+===================================================== */
+
+.service-image {
+    width: 100%;
+    height: 170px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    border-radius: 10px;
+
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   BENEFITS SECTION
+===================================================== */
+
+.benefits-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background: var(--dark);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin-bottom: 45px;
+}
+
+
+/* =====================================================
+   BENEFIT
+===================================================== */
+
+.benefit {
+    min-height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px 24px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.benefit:last-child {
+    border-right: none;
+}
+
+
+/* =====================================================
+   BENEFIT ICON
+===================================================== */
+
+.benefit-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--green);
+
+    font-size: 1rem;
+}
+
+
+/* =====================================================
+   BENEFIT TEXT
+===================================================== */
+
+.benefit h3 {
+    margin-bottom: 3px;
+
+    color: #ffffff;
+
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.benefit p {
+    color: rgba(255, 255, 255, 0.60);
+
+    font-size: 0.78rem;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+
+    background: var(--dark);
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+===================================================== */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 45px 55px 35px;
+
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr 1.2fr 1fr;
+
+    gap: 50px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-logo {
+    margin-bottom: 12px;
+
+    font-family: "Google Sans Flex", sans-serif;
+
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.footer-logo span {
+    color: var(--green);
+}
+
+.footer-logo strong {
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+.footer-brand p {
+    max-width: 280px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 0.85rem;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-column h3 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+}
+
+.footer-column a {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 0.92rem;
+
+    text-decoration: none;
+
+    transition: color var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--green);
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 3px;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition);
+}
+
+.social-icons a:hover {
+    background: var(--green);
+
+    border-color: var(--green);
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    width: 100%;
+
+    padding: 17px 55px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 0.75rem;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .contact-btn {
+        padding: 9px 16px;
+
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 0 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit:nth-child(2) {
+        border-right: none;
+    }
+
+    .benefit:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .footer-container {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   TABLET / MOBILE NAVBAR
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 70px;
+        min-height: 70px;
+
+        padding: 0 25px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        flex-wrap: nowrap;
+    }
+
+
+    /* -----------------------------
+       LOGO
+    ----------------------------- */
+
+    .logo {
+        font-size: 1.6rem;
+        z-index: 1002;
+    }
+
+
+    /* -----------------------------
+       HIDE DESKTOP NAVIGATION
+    ----------------------------- */
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 20px 20px;
+
+        background: var(--dark);
+
+        transform: none;
+
+        z-index: 1001;
+    }
+
+
+    /* -----------------------------
+       OPEN MOBILE NAVIGATION
+    ----------------------------- */
+
+    .nav-links.show {
+        display: flex;
+    }
+
+
+    /* -----------------------------
+       MOBILE NAV LINKS
+    ----------------------------- */
+
+    .nav-links a {
+
+        width: 100%;
+
+        display: block;
+
+        padding: 15px 10px;
+
+        text-align: center;
+
+        color: #ffffff;
+
+        font-size: 1rem;
+
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--green);
+    }
+
+
+    /* -----------------------------
+       HIDE CONTACT BUTTON
+    ----------------------------- */
+
+    .contact-btn {
+        display: none;
+    }
+
+
+    /* -----------------------------
+       HAMBURGER
+    ----------------------------- */
+
+    .mobile-menu {
+
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 5px;
+
+        padding: 0;
+
+        margin-left: auto;
+
+        background: transparent;
+
+        border: none;
+
+        cursor: pointer;
+
+        z-index: 1002;
+    }
+
+
+    .mobile-menu span {
+
+        display: block;
+
+        width: 25px;
+        height: 3px;
+
+        background: #ffffff;
+
+        border-radius: 10px;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    /* -----------------------------
+       HAMBURGER → X
+    ----------------------------- */
+
+    .mobile-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* -----------------------------
+       MAIN
+    ----------------------------- */
+
+    main {
+        padding: 0 25px;
+    }
+
+
+    .services-intro {
+        padding-top: 40px;
+    }
+
+
+    .services-intro h1 {
+        font-size: 1.8rem;
+    }
+
+
+    /* -----------------------------
+       BENEFITS
+    ----------------------------- */
+
+    .benefits-section {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .benefit:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 14px 18px;
+    }
+
+    .logo {
+        font-size: 1.35rem;
+    }
+
+    .contact-btn {
+        padding: 8px 12px;
+
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        gap: 15px 20px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 0 18px;
+    }
+
+    .services-intro {
+        padding: 35px 0 25px;
+    }
+
+    .services-intro h1 {
+        font-size: 1.65rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .service-card {
+        height: 390px;
+    }
+
+    .footer-container {
+        padding: 35px 18px 25px;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        padding: 15px 18px;
+    }
+}

@@ -1,0 +1,960 @@
+/* =========================================================
+   RIDEHUB - VEHICLE DETAILS PAGE
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.details-page {
+    padding-top: 72px;
+}
+
+/* =========================================================
+   MAIN VEHICLE SECTION
+========================================================= */
+
+.vehicle-main {
+
+    padding: 18px 0 45px;
+
+    background: #f7f8f3;
+    margin-top: 0;
+}
+
+
+.vehicle-main-grid {
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+
+    gap: 45px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   VEHICLE GALLERY
+========================================================= */
+
+.vehicle-gallery {
+
+    width: 100%;
+
+}
+
+
+/* Main image box */
+
+.main-image-box {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 430px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e8d8;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+/* Main image */
+
+.main-image-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 25px;
+
+    display: none;
+
+}
+
+
+/* Placeholder */
+
+.image-placeholder {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #a1a79c;
+
+    font-size: 1rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    background: #f1f3ec;
+
+}
+
+
+/* =========================================================
+   THUMBNAILS
+========================================================= */
+
+.vehicle-thumbnails {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+}
+
+
+.thumbnail {
+
+    width: 85px;
+
+    height: 70px;
+
+    border: 1px solid #dfe4d5;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #9aa095;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.thumbnail:hover {
+
+    border-color: #7a900b;
+
+}
+
+
+.thumbnail.active {
+
+    border: 2px solid #7a900b;
+
+    color: #7a900b;
+
+}
+
+
+/* =========================================================
+   VEHICLE INFORMATION
+========================================================= */
+
+.vehicle-info {
+
+    padding: 15px 10px;
+
+}
+
+
+.vehicle-category {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #7a900b;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.vehicle-info h1 {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: 2.4rem;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+}
+
+
+.vehicle-tagline {
+
+    margin: 10px 0 25px;
+
+    color: #666d68;
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.vehicle-price-row {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 28px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+.price-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #777;
+
+    font-size: 0.8rem;
+
+}
+
+
+.vehicle-price-row h2 {
+
+    margin: 0;
+
+    color: #011d19;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+}
+
+
+/* Divider */
+
+.info-divider {
+
+    height: 1px;
+
+    background: #dfe3d9;
+
+    margin: 25px 0;
+
+}
+
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.quick-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.quick-info-item {
+
+    padding: 12px;
+
+    border-left: 2px solid #7a900b;
+
+    background: #ffffff;
+
+}
+
+
+.quick-info-item span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #777;
+
+    font-size: 0.75rem;
+
+}
+
+
+.quick-info-item strong {
+
+    color: #011d19;
+
+    font-size: 0.9rem;
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.vehicle-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+}
+
+
+.vehicle-actions .btn {
+
+    min-width: 145px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   INFORMATION SECTION
+========================================================= */
+
+.vehicle-information {
+
+    padding: 55px 0 65px;
+
+    background: #ffffff;
+
+}
+
+
+.information-grid {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 65%) minmax(320px, 35%);
+
+    gap: 28px;
+
+    align-items: stretch;
+
+}
+
+
+/* =========================================================
+   DETAILS TABS
+========================================================= */
+
+.details-tabs {
+
+    display: flex;
+
+    gap: 35px;
+
+    border-bottom: 1px solid #dfe3d9;
+
+}
+
+
+.details-tab {
+
+    position: relative;
+
+    padding: 0 0 13px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-family: inherit;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+
+}
+
+
+.details-tab:hover {
+
+    color: #7a900b;
+
+}
+
+
+.details-tab.active {
+
+    color: #7a900b;
+
+}
+
+
+.details-tab.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -1px;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: #7a900b;
+
+}
+
+
+/* =========================================================
+   TAB CONTENT
+========================================================= */
+
+.tab-content {
+
+    display: none;
+
+    padding-top: 28px;
+
+}
+
+
+.tab-content.active {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   SPECIFICATIONS
+========================================================= */
+
+.spec-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #e5e8e1;
+
+    border-left: 1px solid #e5e8e1;
+
+}
+
+
+.spec-item {
+
+    min-height: 75px;
+
+    padding: 18px 20px;
+
+    border-right: 1px solid #e5e8e1;
+
+    border-bottom: 1px solid #e5e8e1;
+
+    background: #ffffff;
+
+}
+
+
+.spec-item span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #777;
+
+    font-size: 0.8rem;
+
+}
+
+
+.spec-item strong {
+
+    color: #011d19;
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.feature-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 58px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #e5e8e1;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-size: 0.9rem;
+
+}
+
+
+.feature-icon {
+
+    width: 24px;
+
+    height: 24px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #7a900b;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   EMI CARD
+========================================================= */
+
+.emi-card {
+
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    padding: 24px;
+
+    background: #011d19;
+    border: 1px solid rgba(122, 144, 11, 0.45);
+    border-radius: 10px;
+
+    color: #fbfafb;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.emi-heading {
+
+    margin-bottom: 22px;
+
+}
+
+
+.emi-label {
+
+    color: #7a900b;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.emi-heading h2 {
+
+    margin: 0 0 6px;
+    color: #fbfafb;
+    font-size: 1.15rem;
+
+}
+
+.emi-heading p {
+
+    margin: 0 0 20px;
+    color: #cfd5d3;
+    font-size: 0.9rem;
+
+}
+
+
+/* =========================================================
+   EMI FIELDS
+========================================================= */
+.emi-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+
+.emi-field {
+
+    margin-bottom: 14px;
+
+}
+
+
+.emi-field label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #d2d7d3;
+
+    font-size: 0.75rem;
+
+}
+
+
+.emi-field input,
+.emi-field select {
+
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 11px;
+
+    border: 1px solid #3b514d;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #011d19;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+}
+
+
+.emi-field input:focus,
+.emi-field select:focus {
+
+    border-color: #7a900b;
+
+}
+
+
+/* Calculate button */
+
+.emi-calculate {
+
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #7a900b;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.25s ease;
+
+}
+
+
+.emi-calculate:hover {
+
+    background: #657800;
+
+}
+
+
+/* EMI result */
+
+.emi-result {
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #3b514d;
+
+}
+
+
+.emi-result span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #bfc7c3;
+
+    font-size: 0.75rem;
+
+}
+
+
+.emi-result strong {
+
+    color: #ffffff;
+
+    font-size: 1.25rem;
+
+}
+
+
+.emi-note {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color: #9fa9a4;
+
+    font-size: 0.65rem;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .vehicle-main-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .vehicle-gallery {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .vehicle-info {
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .information-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .emi-card {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .vehicle-main {
+
+        padding: 25px 0 35px;
+
+    }
+
+
+    .main-image-box {
+
+        height: 300px;
+
+    }
+
+
+    .vehicle-info h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .vehicle-price-row {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    .quick-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .vehicle-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .vehicle-actions .btn {
+
+        width: 100%;
+
+    }
+
+
+    .vehicle-information {
+
+        padding: 35px 0 45px;
+
+    }
+
+
+    .details-tabs {
+
+        gap: 25px;
+
+    }
+
+
+    .spec-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .features-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .emi-card {
+
+        padding: 20px;
+
+    }
+
+    .emi-fields {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================================
+   VEHICLE THUMBNAIL IMAGES
+========================================================= */
+
+.thumbnail {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+.thumbnail span {
+    font-size: 0.7rem;
+}
