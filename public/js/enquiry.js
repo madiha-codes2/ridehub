@@ -383,7 +383,7 @@ enquiryForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/enquiries",
+                    "https://ridehub-backend-m7wb.onrender.com/api/enquiries",
                     {
 
                         method: "POST",

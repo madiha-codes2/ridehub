@@ -296,7 +296,7 @@ async function loadFeaturedBikePrices() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/vehicles"
+            "https://ridehub-backend-m7wb.onrender.com/api/vehicles"
         );
 
 
