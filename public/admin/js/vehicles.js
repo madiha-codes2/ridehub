@@ -71,7 +71,7 @@ async function checkAdminAuthentication() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/api/admin/check",
+            "https://ridehub-backend-m7wb.onrender.com/api/admin/check",
             {
                 method: "GET",
                 credentials: "include"
@@ -117,7 +117,7 @@ async function checkAdminAuthentication() {
 async function loadVehicles() {
     try {
         const response = await fetch(
-            "http://127.0.0.1:5000/api/vehicles"
+            "https://ridehub-backend-m7wb.onrender.com/api/vehicles"
         );
 
         const data = await response.json();
@@ -244,7 +244,7 @@ function displayVehicles(vehicles) {
 async function openEditModal(vehicleId) {
     try {
         const response = await fetch(
-            `http://127.0.0.1:5000/api/vehicles/${vehicleId}`
+            `https://ridehub-backend-m7wb.onrender.com/api/vehicles/${vehicleId}`
         );
 
         const vehicle = await response.json();
@@ -366,7 +366,7 @@ editVehicleForm.addEventListener(
         try {
 
             const response = await fetch(
-                `http://127.0.0.1:5000/api/vehicles/${currentVehicleId}`,
+                `https://ridehub-backend-m7wb.onrender.com/api/vehicles/${currentVehicleId}`,
                 {
                     method: "PUT",
 
@@ -512,7 +512,7 @@ logoutButton.addEventListener(
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:5000/api/admin/logout",
+                "https://ridehub-backend-m7wb.onrender.com/api/admin/logout",
                 {
                     method: "POST",
                     credentials: "include"

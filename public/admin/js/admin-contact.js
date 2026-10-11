@@ -27,7 +27,7 @@ async function checkAdminAuthentication() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/api/admin/check",
+            "https://ridehub-backend-m7wb.onrender.com/api/admin/check",
             {
                 method: "GET",
                 credentials: "include"
@@ -75,7 +75,7 @@ async function loadContactMessages() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/api/contact",
+            "https://ridehub-backend-m7wb.onrender.com/api/contact",
             {
                 method: "GET",
                 credentials: "include"
@@ -293,7 +293,7 @@ async function updateContactStatus(
     try {
 
         const response = await fetch(
-            `http://127.0.0.1:5000/api/contact/${contactId}/status`,
+            `https://ridehub-backend-m7wb.onrender.com/api/contact/${contactId}/status`,
             {
                 method: "PUT",
 
@@ -486,7 +486,7 @@ logoutButton.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:5000/api/admin/logout",
+                    "https://ridehub-backend-m7wb.onrender.com/api/admin/logout",
                     {
                         method: "POST",
                         credentials: "include"
