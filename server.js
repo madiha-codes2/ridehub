@@ -11,11 +11,15 @@ const adminRoutes = require("./routes/admin");
 const offerRoutes = require("./routes/offers");
 
 const app = express();
+app.set("trust proxy", 1);
 
 const PORT = process.env.PORT || 5000;
 
 
 // Middleware
+
+
+app.set("trust proxy", 1);
 
 app.use(cors({
     origin: [
@@ -34,8 +38,8 @@ app.use(
         saveUninitialized: false,
         cookie: {
             httpOnly: true,
-            sameSite: "lax",
-            secure: false
+            sameSite: "none",
+            secure: true
         }
     })
 );
