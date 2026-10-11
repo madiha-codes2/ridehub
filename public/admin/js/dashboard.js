@@ -12,7 +12,7 @@ async function checkAdminAuthentication() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/api/admin/check",
+            "https://ridehub-backend-m7wb.onrender.com/api/admin/check",
             {
                 method: "GET",
                 credentials: "include"
@@ -69,7 +69,7 @@ logoutButton.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/api/admin/logout",
+            "https://ridehub-backend-m7wb.onrender.com/api/admin/logout",
             {
                 method: "POST",
                 credentials: "include"
@@ -125,7 +125,7 @@ async function loadDashboardStatistics() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/api/admin/dashboard",
+            "https://ridehub-backend-m7wb.onrender.com/api/admin/dashboard",
             {
                 method: "GET",
                 credentials: "include"
